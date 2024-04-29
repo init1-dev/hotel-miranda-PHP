@@ -7,4 +7,6 @@
     ];
 
     renderTemplate($template, $values);
+    // phpinfo();
+    // require_once __DIR__ . '/utils/connection.php';
 ?>

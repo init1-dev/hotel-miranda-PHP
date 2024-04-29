@@ -14,7 +14,9 @@
             </div>
             <div class="banner__breadcrumb">
                 <div class="banner__breadcrumb-inner">
-                    <span>Home</span><span>|</span><span>About</span>
+                    <span>
+                        <a href="index.php">Home</a>
+                    </span><span>|</span><span>About</span>
                 </div>
             </div>
         </div>

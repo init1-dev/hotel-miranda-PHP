@@ -2834,6 +2834,10 @@
 .banner__breadcrumb span:not(:last-child) {
   margin-right: 0.5em;
 }
+.banner__breadcrumb span a {
+  text-decoration: none;
+  color: unset;
+}
 
 .header {
   position: fixed;
