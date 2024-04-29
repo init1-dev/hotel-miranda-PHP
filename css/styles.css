@@ -249,8 +249,8 @@
     padding-bottom: 0;
   }
 }
-#rooms #rooms-swiper .swipe-wrapper {
-  height: 65vh;
+#rooms #rooms-swiper .swiper-wrapper {
+  height: auto;
 }
 #rooms #rooms-swiper .swiper-slide {
   font-size: 18px;
@@ -584,7 +584,6 @@
 }
 .ourFoods #menu-swipper {
   margin-top: 4rem;
-  height: 100%;
 }
 @media (min-width: 1000px) {
   .ourFoods #menu-swipper {
@@ -2650,6 +2649,7 @@
 }
 #coreFeatures-swipper .swiper-wrapper {
   padding-bottom: 3rem;
+  height: auto;
 }
 #coreFeatures-swipper .coreFeatures-swipper--content {
   margin: 0 20px;
@@ -3100,7 +3100,6 @@
 
 .footer {
   position: relative;
-  height: 100%;
   width: 100%;
   user-select: none;
 }
