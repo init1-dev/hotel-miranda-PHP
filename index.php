@@ -46,7 +46,7 @@
                     <p class="input--text">Departure Date</p>
                     <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()">
                 </div>
-                <a href="room-list.html">
+                <a href="room-list.php">
                     <button class="submit" type="button">
                         CHECK AVAILABILITY
                     </button>
@@ -68,7 +68,7 @@
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                         ex ea commodo consequat.
                     </p>
-                    <a href="rooms-grid.html" style="all: unset;">
+                    <a href="rooms-grid.php" style="all: unset;">
                         <button class="about-us__button upper__case" style="cursor: pointer;">
                             BOOK NOW
                         </button>
@@ -218,7 +218,7 @@
             <p class="p">INTRO VIDEO</p>
             <h2 class="h2">Meet With Our Luxury Place.</h2>
             <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand this.</p>
-            <a href="rooms-grid.html" style="all: unset;">
+            <a href="rooms-grid.php" style="all: unset;">
                 <button class="color">BOOK NOW</button>
             </a>
         </div>

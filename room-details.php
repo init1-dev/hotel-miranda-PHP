@@ -70,7 +70,7 @@
                             <p class="input--text">Check Out</p>
                             <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()">
                         </div>
-                        <a href="room-list.html">
+                        <a href="room-list.php">
                             <button class="submit" type="button">
                                 CHECK AVAILABILITY
                             </button>

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const path = location.pathname;
 
     let video = document.getElementById("luxuryVideo");
-    if(path === "/index.html" || path === "/about.html"){
+    if(path === "/index.php" || path === "/about.php"){
         video.controls = false;
 
         $('.play-button').click(function() {

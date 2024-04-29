@@ -68,7 +68,7 @@
                         <div class="info__specs--text">
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.html">
+                                <a style="all:unset;" href="room-details.php">
                                     <button class="color">BOOK NOW</button>
                                 </a>
                                 <button class="dark">GALLERY</button>
@@ -155,7 +155,7 @@
                         <div class="info__specs--text">
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.html">
+                                <a style="all:unset;" href="room-details.php">
                                     <button class="color">BOOK NOW</button>
                                 </a>
                                 <button class="dark">GALLERY</button>
@@ -242,7 +242,7 @@
                         <div class="info__specs--text">
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.html">
+                                <a style="all:unset;" href="room-details.php">
                                     <button class="color">BOOK NOW</button>
                                 </a>
                                 <button class="dark">GALLERY</button>
@@ -329,7 +329,7 @@
                         <div class="info__specs--text">
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.html">
+                                <a style="all:unset;" href="room-details.php">
                                     <button class="color">BOOK NOW</button>
                                 </a>
                                 <button class="dark">GALLERY</button>
@@ -416,7 +416,7 @@
                         <div class="info__specs--text">
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.html">
+                                <a style="all:unset;" href="room-details.php">
                                     <button class="color">BOOK NOW</button>
                                 </a>
                                 <button class="dark">GALLERY</button>
@@ -503,7 +503,7 @@
                         <div class="info__specs--text">
                             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.html">
+                                <a style="all:unset;" href="room-details.php">
                                     <button class="color">BOOK NOW</button>
                                 </a>
                                 <button class="dark">GALLERY</button>

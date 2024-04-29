@@ -60,7 +60,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -88,7 +88,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -116,7 +116,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -144,7 +144,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -172,7 +172,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -200,7 +200,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -228,7 +228,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -256,7 +256,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -284,7 +284,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -312,7 +312,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -340,7 +340,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
@@ -368,7 +368,7 @@
                     <div class="rooms__card__info__price">
                         <h2 class="rooms__card__info__price--price">$345</h2>
                         <p class="rooms__card__info__price--night">/Night</p>
-                        <a href="room-details.html">
+                        <a href="room-details.php">
                             <button class="rooms__card__info__price--button">Booking now</button>
                         </a>
                     </div>
