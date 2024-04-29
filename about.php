@@ -1,7 +1,7 @@
 <?php
     require_once __DIR__ . '/utils/renderTemplate.php';
 
-    $template = 'layout';
+    $template = 'about';
     $values = [
         'title' => 'About Hotel Miranda'
     ];
