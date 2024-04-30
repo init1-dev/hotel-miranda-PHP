@@ -145,83 +145,46 @@
             <div id="rooms-swiper-normal" class="room-swiper">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="slide-title">
-                            <div class="slide-title--group">
-                                <i class="fa-solid fa-bed"></i>
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-car"></i>
-                                <i class="fa-regular fa-snowflake"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-ban-smoking"></i>
-                                <i class="fa-solid fa-martini-glass-citrus"></i>
+                    @foreach($popular as $room)
+                        <div class="swiper-slide">
+                            <div class="slide-title">
+                                @if(in_array('Single Bed', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-bed"></i>
+                                @endif
+                                @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-wifi"></i>
+                                @endif
+                                @if(in_array('Grocery', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-car"></i>
+                                @endif
+                                @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
+                                    <i class="fa-regular fa-snowflake"></i>
+                                @endif
+                                @if(in_array('Expert Team', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-dumbbell"></i>
+                                @endif
+                                @if(in_array('Breakfast', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-ban-smoking"></i>
+                                @endif
+                                @if(in_array('Shop Near', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-martini-glass-citrus"></i>
+                                @endif
+                            </div>
+                            <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
+                            <div class="slide-info">
+                                <div class="description">
+                                    <h2>{{$room['name']}}</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                </div>
+                                <div class="rooms__card__info__price">
+                                    <h2 class="rooms__card__info__price--price">$345</h2>
+                                    <p class="rooms__card__info__price--night">/Night</p>
+                                    <button class="rooms__card__info__price--button">Booking now</button>
+                                </div>
                             </div>
                         </div>
-                        <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
-                        <div class="slide-info">
-                            <div class="description">
-                                <h2>Minimal Duplex Room</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-                            <div class="rooms__card__info__price">
-                                <h2 class="rooms__card__info__price--price">$345</h2>
-                                <p class="rooms__card__info__price--night">/Night</p>
-                                <button class="rooms__card__info__price--button">Booking now</button>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
-                    <div class="swiper-slide">
-                        <div class="slide-title">
-                            <div class="slide-title--group">
-                                <i class="fa-solid fa-bed"></i>
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-car"></i>
-                                <i class="fa-regular fa-snowflake"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-ban-smoking"></i>
-                                <i class="fa-solid fa-martini-glass-citrus"></i>
-                            </div>
-                        </div>
-                        <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
-                        <div class="slide-info">
-                            <div class="description">
-                                <h2>Minimal Duplex Room</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-                            <div class="rooms__card__info__price">
-                                <h2 class="rooms__card__info__price--price">$345</h2>
-                                <p class="rooms__card__info__price--night">/Night</p>
-                                <button class="rooms__card__info__price--button">Booking now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="slide-title">
-                            <div class="slide-title--group">
-                                <i class="fa-solid fa-bed"></i>
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-car"></i>
-                                <i class="fa-regular fa-snowflake"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-ban-smoking"></i>
-                                <i class="fa-solid fa-martini-glass-citrus"></i>
-                            </div>
-                        </div>
-                        <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
-                        <div class="slide-info">
-                            <div class="description">
-                                <h2>Minimal Duplex Room</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-                            <div class="rooms__card__info__price">
-                                <h2 class="rooms__card__info__price--price">$345</h2>
-                                <p class="rooms__card__info__price--night">/Night</p>
-                                <button class="rooms__card__info__price--button">Booking now</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
