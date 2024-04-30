@@ -68,7 +68,11 @@
                 <h3>Get Restaurant Facilities & Many Other More</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                 <div class="main__buttons">
-                    <button class="color">TAKE A TOUR</button>
+                    <a 
+                        href="https://www.ujamaaresort.org/wp-content/uploads/2018/01/Ujamaa-restaurant-menu.pdf"
+                    >
+                        <button class="color">TAKE A LOOK</button>
+                    </a>
                 </div>
             </div>
         </div>

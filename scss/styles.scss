@@ -72,6 +72,10 @@ body {
 
     .main__buttons {
 
+        a {
+            text-decoration: none;
+        }
+
         @media (min-width: 1000px) {
             display: flex;
         }

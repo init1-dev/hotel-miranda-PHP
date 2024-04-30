@@ -3625,6 +3625,9 @@ body .desc {
   line-height: 24px;
   color: #777777;
 }
+body .main__buttons a {
+  text-decoration: none;
+}
 @media (min-width: 1000px) {
   body .main__buttons {
     display: flex;
