@@ -1,5 +1,6 @@
 <?php
     require_once __DIR__ . '/utils/renderTemplate.php';
+    require_once __DIR__ . '/utils/connection.php';
 
     $template = 'index';
     $values = [
@@ -8,5 +9,4 @@
 
     renderTemplate($template, $values);
     // phpinfo();
-    // require_once __DIR__ . '/utils/connection.php';
 ?>
