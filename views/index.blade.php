@@ -124,7 +124,7 @@
                                 <p>{{$room['description']}}</p>
                             </div>
                             <div class="price">
-                                <h2>{{$room['price'] / 100}}€</h2>
+                                <h2>{{ round($room['price'] / 100) }}€</h2>
                                 <p>/Night</p>
                             </div>
                         </div>

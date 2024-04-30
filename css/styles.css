@@ -1878,6 +1878,7 @@
     margin: 0 2rem 0 2rem;
     translate: 0% -10%;
     border-top: 4px solid #BEAD8E;
+    padding: 0 1rem;
   }
 }
 .offers .rooms_grid .rooms__card--info .info__details {
@@ -1895,16 +1896,15 @@
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
-  right: -0.1rem;
-  bottom: 7.5rem;
-  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  right: 0rem;
+  top: -5.2rem;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 @media (min-width: 1000px) {
   .offers .rooms_grid .rooms__card--info .info__details .price {
     position: unset;
     z-index: 1;
-    right: 4%;
-    bottom: 12%;
+    margin-right: 0.5rem;
     text-shadow: unset;
   }
 }
@@ -1946,6 +1946,11 @@
   display: inline-block;
   margin-bottom: 1rem;
 }
+@media (min-width: 1000px) {
+  .offers .rooms_grid .rooms__card--info .info__details--name {
+    margin-bottom: 0;
+  }
+}
 .offers .rooms_grid .rooms__card--info .info__details--name .type {
   font-family: Archivo;
   font-weight: 700;
@@ -1954,6 +1959,7 @@
   letter-spacing: 2.8px;
   color: #777777;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .offers .rooms_grid .rooms__card--info .info__details--name .name {
   font-family: Old Standard TT;
@@ -1977,7 +1983,7 @@
 @media (min-width: 1000px) {
   .offers .rooms_grid .rooms__card--info .separator {
     margin-top: 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     display: block;
   }
 }
@@ -1998,7 +2004,7 @@
 }
 @media (min-width: 1000px) {
   .offers .rooms_grid .rooms__card--info .info__specs--text {
-    width: 45%;
+    width: 50%;
     margin-right: 2rem;
   }
 }
@@ -2013,6 +2019,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  min-height: 96px;
   letter-spacing: 0px;
   text-align: left;
   color: #777777;
@@ -2024,12 +2031,13 @@
 }
 @media (min-width: 1000px) {
   .offers .rooms_grid .rooms__card--info .info__specs--text .main__buttons {
-    position: absolute;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1350px) {
   .offers .rooms_grid .rooms__card--info .info__specs--text .main__buttons {
     position: unset;
+    margin-bottom: 2rem;
   }
 }
 .offers .rooms_grid .rooms__card--info .info__specs--text .main__buttons .color {
@@ -2038,35 +2046,38 @@
 }
 .offers .rooms_grid .rooms__card--info .info__specs--icons {
   margin-top: 1rem;
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 @media (min-width: 1000px) {
   .offers .rooms_grid .rooms__card--info .info__specs--icons {
+    width: 50%;
     margin-top: unset;
-    display: flex;
-    justify-content: flex-end;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1350px) {
   .offers .rooms_grid .rooms__card--info .info__specs--icons {
     width: 100%;
-    justify-content: space-around;
   }
 }
 .offers .rooms_grid .rooms__card--info .info__specs--icons .list {
+  flex: 1 1 100%;
   list-style: none;
-  margin-right: 2rem;
-  width: max-content;
+  column-count: 2;
 }
 .offers .rooms_grid .rooms__card--info .info__specs--icons .list .spec {
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
 }
 .offers .rooms_grid .rooms__card--info .info__specs--icons .list .spec i {
   color: #BEAD8E;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 .offers .rooms_grid .rooms__card--info .info__specs--icons .list .spec .spec--text {
   display: inline-block;
@@ -2117,7 +2128,6 @@
   .offers .swiper--bg .section-header .subtitle {
     font-size: 80px;
     line-height: 80px;
-    margin-bottom: 4rem;
   }
 }
 .offers .swiper--bg #rooms-swiper-normal {
@@ -2128,9 +2138,6 @@
     width: 85vw;
     margin: auto;
   }
-}
-.offers .swiper--bg #rooms-swiper-normal .slide-title {
-  display: initial;
 }
 .offers .swiper--bg #rooms-swiper-normal .slide-title--group, .offers .swiper--bg #rooms-swiper-normal .slide-info {
   box-shadow: unset;

@@ -22,93 +22,116 @@
 
         <div class="rooms_grid">
 
-            <div class="rooms__card">
-                <div class="image--container">
-                    <img src="./assets/room-images/luxuryroom.png" alt="Imagen 1">
-                </div>
+            @foreach($offers as $room)
+                <div class="rooms__card">
+                    <div class="image--container">
+                        <img src={{$room['photo']}} alt="Imagen 1">
+                    </div>
 
-                <div class="rooms__card--info">
-                    <div class="info__details">
-                        <div class="info__details--name">
-                            <h2 class="type">DOUBLE BED</h2>
-                            <p class="name">Luxury Double Bed</p>
-                        </div>
-                        <div class="price">
-                            <div class="regular-price">
-                                <p class="price">$500</p>
-                                <p class="night">/Night</p>
+                    <div class="rooms__card--info">
+                        <div class="info__details">
+                            <div class="info__details--name">
+                                <h2 class="type">{{strtoupper($room['room_type'])}}</h2>
+                                <p class="name">{{$room['name']}}</p>
                             </div>
-                            <div class="offer-price">
-                                <p class="price">$345
-                                <p class="night">/Night</p>
+                            <div class="price">
+                                <div class="regular-price">
+                                    <p class="price">{{ round($room['price'] / 100) }}</p>
+                                    <p class="night">/Night</p>
+                                </div>
+                                <div class="offer-price">
+                                    <p class="price">{{ round(($room['price'] / 100) * ( 1 - $room['discount'] / 100)) }}</p>
+                                    <p class="night">/Night</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="separator">
+
+                        <div class="info__specs">
+                            <div class="info__specs--text">
+                                <p class="description">{{$room['description']}}</p>
+                                <div class="main__buttons">
+                                    <a style="all:unset;" href="room-details.php">
+                                        <button class="color">BOOK NOW</button>
+                                    </a>
+                                    <button class="dark">GALLERY</button>
+                                </div>
+                            </div>
+
+                            <div class="info__specs--icons">
+                                <ul class="list">
+                                    @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-fan"></i>
+                                            <p class="spec--text">Air conditioner </p>
+                                        </li>
+                                    @endif
+                                    @if(in_array('Breakfast', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-utensils"></i>
+                                            <p class="spec--text">Breakfast</p>
+                                        </li>
+                                    @endif
+                                    @if(in_array('Cleaning', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-broom"></i>
+                                            <p class="spec--text">Cleaning</p>
+                                        </li>
+                                    @endif
+                                    @if(in_array('Grocery', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-basket-shopping"></i>
+                                            <p class="spec--text">Grocery</p>
+                                        </li>
+                                    @endif
+                                    @if(in_array('Shop Near', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-shop"></i>
+                                            <p class="spec--text">Shop near</p>
+                                        </li>
+                                    @endif
+                                
+                                    @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-wifi"></i>
+                                            <p class="spec--text">Fast WiFi</p>
+                                        </li>
+                                    @endif
+                                    
+                                    @if(in_array('Kitchen', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-kitchen-set"></i>
+                                            <p class="spec--text">Kitchen</p>
+                                        </li>
+                                    @endif
+                                    
+                                    @if(in_array('Shower', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-shower"></i>
+                                            <p class="spec--text">Shower</p>
+                                        </li>
+                                    @endif
+                                    @if(in_array('Single Bed', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <p class="spec--text">Single bed</p>
+                                        </li>
+                                    @endif
+                                    @if(in_array('Towels', json_decode($room['amenities'], true)))
+                                        <li class="spec">
+                                            <i class="fa-solid fa-toilet-paper"></i>
+                                            <p class="spec--text">Towels</p>
+                                        </li>
+                                    @endif
+                                    
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    <hr class="separator">
-
-                    <div class="info__specs">
-                        <div class="info__specs--text">
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <div class="main__buttons">
-                                <a style="all:unset;" href="room-details.php">
-                                    <button class="color">BOOK NOW</button>
-                                </a>
-                                <button class="dark">GALLERY</button>
-                            </div>
-                        </div>
-
-                        <div class="info__specs--icons">
-                            <ul class="list">
-                                <li class="spec">
-                                    <i class="fa-solid fa-fan"></i>
-                                    <p class="spec--text">Air conditioner </p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-utensils"></i>
-                                    <p class="spec--text">Breakfast</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-broom"></i>
-                                    <p class="spec--text">Cleaning</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    <p class="spec--text">Grocery</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-shop"></i>
-                                    <p class="spec--text">Shop near</p>
-                                </li>
-                            </ul>
-
-                            <ul class="list">
-                                <li class="spec">
-                                    <i class="fa-solid fa-wifi"></i>
-                                    <p class="spec--text">Fast WiFi</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-kitchen-set"></i>
-                                    <p class="spec--text">Kitchen</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-shower"></i>
-                                    <p class="spec--text">Shower</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-bed"></i>
-                                    <p class="spec--text">Single bed</p>
-                                </li>
-                                <li class="spec">
-                                    <i class="fa-solid fa-toilet-paper"></i>
-                                    <p class="spec--text">Towels</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-            </div>
-
+            @endforeach
+{{-- 
             <div class="rooms__card">
                 <div class="image--container">
                     <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
@@ -542,7 +565,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
 

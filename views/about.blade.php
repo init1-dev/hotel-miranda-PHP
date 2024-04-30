@@ -70,6 +70,7 @@
                 <div class="main__buttons">
                     <a 
                         href="https://www.ujamaaresort.org/wp-content/uploads/2018/01/Ujamaa-restaurant-menu.pdf"
+                        target="_blank" rel="nofollow noopener noreferrer"
                     >
                         <button class="color">TAKE A LOOK</button>
                     </a>
