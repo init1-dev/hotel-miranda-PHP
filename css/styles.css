@@ -3655,6 +3655,12 @@ body .main__buttons button.dark {
   background-color: #333333;
   border: 2px solid #676767;
 }
+body .swiper {
+  height: auto !important;
+}
+body .swiper-wrapper {
+  height: auto !important;
+}
 body .swiper-button-next, body .swiper-button-prev {
   margin-top: 2rem;
   color: black;
