@@ -130,7 +130,6 @@
                         </div>
                     </div>
                 @endforeach
-                ...
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -237,7 +236,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- ... -->
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -361,7 +359,6 @@
                         </div>
                     </div>
                 </div>
-                ...
             </div>
 
             <div class="swiper-button-prev"></div>
@@ -388,7 +385,6 @@
                 <div class="swiper-slide">
                     <img src="./assets/food/fruit3.png" alt="">
                 </div>
-                ...
             </div>
             <div class="swiper-pagination"></div>
         </div>
