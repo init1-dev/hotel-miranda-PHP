@@ -36,11 +36,11 @@
                             </div>
                             <div class="price">
                                 <div class="regular-price">
-                                    <p class="price">{{ round($room['price'] / 100) }}</p>
+                                    <p class="price">${{ round($room['price'] / 100) }}</p>
                                     <p class="night">/Night</p>
                                 </div>
                                 <div class="offer-price">
-                                    <p class="price">{{ round(($room['price'] / 100) * ( 1 - $room['discount'] / 100)) }}</p>
+                                    <p class="price">${{ round(($room['price'] / 100) * ( 1 - $room['discount'] / 100)) }}</p>
                                     <p class="night">/Night</p>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                             <div class="info__specs--text">
                                 <p class="description">{{$room['description']}}</p>
                                 <div class="main__buttons">
-                                    <a style="all:unset;" href="room-details.php">
+                                    <a style="all:unset;" href="room-details.php?id={{$room['_id']}}">
                                         <button class="color">BOOK NOW</button>
                                     </a>
                                     <button class="dark">GALLERY</button>
@@ -174,12 +174,16 @@
                             <div class="slide-info">
                                 <div class="description">
                                     <h2>{{$room['name']}}</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                    <p>{{ $room['description'] }}</p>
                                 </div>
                                 <div class="rooms__card__info__price">
-                                    <h2 class="rooms__card__info__price--price">$345</h2>
-                                    <p class="rooms__card__info__price--night">/Night</p>
-                                    <button class="rooms__card__info__price--button">Booking now</button>
+                                    <div>
+                                        <h2 class="rooms__card__info__price--price">$345</h2>
+                                        <p class="rooms__card__info__price--night">/Night</p>
+                                    </div>
+                                    <a style="all:unset;" href="room-details.php?id={{$room['_id']}}">
+                                        <button class="rooms__card__info__price--button">Booking now</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
