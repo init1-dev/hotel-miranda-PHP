@@ -39,19 +39,19 @@
                     translate: unset;
                     position: absolute;
                     top: 30px;
-                    right: 41%;
+                    left: 45%;
                     margin: auto;
                 }
 
-                @media (min-width:1000px){
-                    right: 40.7%;
+                @media (min-width:1350px){
+                    left: 36%;
                 }
             }
     
             img {
 
                 @media (min-width:1000px){
-                    width: 50%;
+                    max-width: 400px;
                 }
             }
     
