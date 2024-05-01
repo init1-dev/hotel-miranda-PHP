@@ -9,10 +9,14 @@
     $db_password = $_ENV['DB_PASSWORD'];
     $db_name = $_ENV['DB_NAME'];
 
-    $connection = new mysqli($db_server, $db_username, $db_password, $db_name);
+    try {
+        $connection = new mysqli($db_server, $db_username, $db_password, $db_name);
 
-    if ($connection->connect_error) {
-        die("Connection failed: " . $connection->connect_error);
+        if ($connection->connect_error) {
+            throw new Exception("Connection failed: " . $connection->connect_error);
+        }
+        // echo "Connected successfully";
+    } catch(Exception $e) {
+        echo "Error: " . $e->getMessage();
     }
-    // echo "Connected successfully";
 ?>

@@ -27,11 +27,11 @@
             <div class="info">
                 <div class="info_container">
                     <span>
-                        <h5>DOUBLE BED</h5>
-                        <h2>Luxury Double Bed</h2>
+                        <h5>{{strtoupper($room['room_type'])}}</h5>
+                        <h2>{{ $room['name']}} <small>#{{$room['room_number']}}</small></h2>
                     </span>
                     <span class="price">
-                        <p>$345</p>
+                        <p>${{ round($room['price'] / 100) }}</p>
                         <small>/night</small>
                     </span>
                 </div>
@@ -60,88 +60,111 @@
             </main>
         </div>
         <div class="info-container room-description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            </p>
+            <p>{{ $room['description'] }}</p>
         </div>
         <div class="info-container amenities">
             <h4>Amenities</h4>
             <hr>
             <ul class="amenities-list">
-                <li class="amenity">
-                    <i class="fa-solid fa-wind"></i>
-                    <p>Air conditioner </p>
-                </li>
+                @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-fan"></i>
+                        <p>Air conditioner </p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-mug-saucer"></i>
-                    <p>Breakfast</p>
-                </li>
+                @if(in_array('Breakfast', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-utensils"></i>
+                        <p>Breakfast</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-broom"></i>
-                    <p>Cleaning</p>
-                </li>
+                @if(in_array('Cleaning', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-broom"></i>
+                        <p>Cleaning</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                    <p>Grocery</p>
-                </li>
+                @if(in_array('Grocery', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <p>Grocery</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <p>Shop near</p>
-                </li>
+                @if(in_array('Shop Near', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-shop"></i>
+                        <p>Shop near</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-wifi"></i>
-                    <p>High speed WiFi</p>
-                </li>
+                @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-wifi"></i>
+                        <p>High speed WiFi</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-fire-burner"></i>
-                    <p>Kitchen</p>
-                </li>
+                @if(in_array('Kitchen', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                        <p>Kitchen</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-shower"></i>
-                    <p>Shower</p>
-                </li>
+                @if(in_array('Shower', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-shower"></i>
+                        <p>Shower</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-bed"></i>
-                    <p>Single bed</p>
-                </li>
+                @if(in_array('Single Bed', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-bed"></i>
+                        <p>Single bed</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-toilet-paper"></i>
-                    <p>Towels</p>
-                </li>
+                @if(in_array('Towels', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-toilet-paper"></i>
+                        <p>Towels</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-lock"></i>
-                    <p>Strong Locker</p>
-                </li>
+                {{--  --}}
 
-                <li class="amenity">
-                    <i class="fa-solid fa-key"></i>
-                    <p>Smart Security</p>
-                </li>
+                @if(in_array('Strong Locker', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-lock"></i>
+                        <p>Strong Locker</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-headset"></i>
-                    <p>24/7 Online Support</p>
-                </li>
+                @if(in_array('Smart Security', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-key"></i>
+                        <p>Smart Security</p>
+                    </li>
+                @endif
+                
+                @if(in_array('24/7 Online Support', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-headset"></i>
+                        <p>24/7 Online Support</p>
+                    </li>
+                @endif
 
-                <li class="amenity">
-                    <i class="fa-solid fa-people-group"></i>
-                    <p>Expert Team</p>
-                </li>
-
-                <!-- <li>
-                    
-                    <p></p>
-                </li> -->
+                @if(in_array('Expert Team', json_decode($room['amenities'], true)))
+                    <li class="amenity">
+                        <i class="fa-solid fa-people-group"></i>
+                        <p>Expert Team</p>
+                    </li>
+                @endif
             </ul>
         </div>
         <div class="info-container graphic">
@@ -164,9 +187,9 @@
             </div>
         </div>
         <div class="info-container cancelation">
-            <h4>Cancelation</h4>
+            <h4>{{ "Cancellation policy " }} <small>#{{$room['room_number']}}</small></h4>
             <hr>
-            <p>Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.</p>
+            <p>{{ $room['cancellation'] }}</p>
         </div>
         <div class="swiper--bg">
 

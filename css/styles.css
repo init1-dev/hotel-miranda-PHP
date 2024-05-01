@@ -1760,7 +1760,7 @@
 }
 @media (min-width: 1000px) {
   .room-details .swiper--bg #rooms-swiper-normal .slide-title .slide-title--group {
-    translate: 0 23rem;
+    translate: 0 20rem;
     margin: 0 1rem 0 1rem;
   }
 }
