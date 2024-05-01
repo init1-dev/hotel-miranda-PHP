@@ -5,25 +5,36 @@
 
     $query = $getRooms;
 
-    $results = $connection->query($query);
-
-    $data = array();
-
-    if($results->num_rows > 0){
-        while ($row = $results->fetch_assoc()){
-            $data[] = $row;
+    if($stmt = $connection->prepare($query)){
+        if(isset($_POST['arrival']) && isset($_POST['departure'])){
+            $arrival = $_POST['arrival'];
+            $departure = $_POST['departure'];
         }
-    } else {
-        echo "No results";
     }
 
-    $connection->close();
+    print_r("check_in → " . $arrival);
+    echo "<br>";
+    print_r("check_out → " . $departure);
 
-    $template = 'room-list';
-    $values = [
-        'title' => 'Rooms List',
-        'rooms' => $data
-    ];
+    // $results = $connection->query($query);
 
-    renderTemplate($template, $values);
+    // $data = array();
+
+    // if($results->num_rows > 0){
+    //     while ($row = $results->fetch_assoc()){
+    //         $data[] = $row;
+    //     }
+    // } else {
+    //     echo "No results";
+    // }
+
+    // $connection->close();
+
+    // $template = 'room-list';
+    // $values = [
+    //     'title' => 'Rooms List',
+    //     'rooms' => $data
+    // ];
+
+    // renderTemplate($template, $values);
 ?>
