@@ -65,6 +65,10 @@
                     letter-spacing: -0.72px;
                     color: $mainBlack;
                     margin-bottom: 1rem;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
 
                     @media (min-width: 1000px) {
 
@@ -77,6 +81,10 @@
                     font-size: 14px;
                     line-height: 24px;
                     color: #777777;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
 
                     @media (min-width: 1000px) {
 

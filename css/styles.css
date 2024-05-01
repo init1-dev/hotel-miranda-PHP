@@ -2586,6 +2586,10 @@
   letter-spacing: -0.72px;
   color: #222222;
   margin-bottom: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .rooms_grid .rooms__card__info__description--description {
   font-family: Roboto;
@@ -2593,6 +2597,10 @@
   font-size: 14px;
   line-height: 24px;
   color: #777777;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .rooms_grid .rooms__card__info__price--price, .rooms_grid .rooms__card__info__price--night {
   display: inline-block;

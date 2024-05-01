@@ -1,6 +1,6 @@
 <?php
 
-    $getRoomsBasic = '
+    $getRooms = '
         SELECT
             room.id as _id,
             room.name,
@@ -8,10 +8,12 @@
             room_type.name AS room_type,
             room.room_number,
             room.description,
-            json_arrayagg(amenity.name) as amenities,
             room.offer,
             room.price,
+            room.cancellation,
+            json_arrayagg(amenity.name) as amenities,
             room.discount,
+            room.status,
             room.createdAt,
             room.updatedAt
         FROM

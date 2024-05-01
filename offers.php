@@ -1,9 +1,9 @@
 <?php
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
-    require_once __DIR__ . '/utils/queries/getRoomsBasic.php';
+    require_once __DIR__ . '/utils/queries/getRooms.php';
 
-    $query = $getRoomsBasic;
+    $query = $getRooms;
 
     $results = $connection->query($query);
 

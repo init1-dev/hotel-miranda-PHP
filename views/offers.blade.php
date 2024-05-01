@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="rooms__card__info__price">
                                     <div>
-                                        <h2 class="rooms__card__info__price--price">$345</h2>
+                                        <h2 class="rooms__card__info__price--price">${{ round($room['price'] / 100) }}</h2>
                                         <p class="rooms__card__info__price--night">/Night</p>
                                     </div>
                                     <a style="all:unset;" href="room-details.php?id={{$room['_id']}}">
