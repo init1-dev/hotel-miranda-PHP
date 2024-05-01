@@ -23,20 +23,32 @@
         </div>
 
         <div class="main__form">
-            <form id="check-availability-form" action="">
+            <form id="check-availability-form" action="room-list.php" method="POST">
                 <div class="input--container">
-                    <p class="input--text">Arrival Date</p>
-                    <input class="input" type="date" name="arrival" id="arrival" onfocus="this.showPicker()">
+                    <label for="arrival" class="input--text">Arrival Date</p>
+                    <input 
+                        class="input" 
+                        type="date" 
+                        name="arrival" 
+                        id="arrival" 
+                        onfocus="this.showPicker()" 
+                        required
+                    >
                 </div>
                 <div class="input--container">
-                    <p class="input--text">Departure Date</p>
-                    <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()">
+                    <label for="departure" class="input--text">Departure Date</p>
+                    <input 
+                        class="input" 
+                        type="date" 
+                        name="departure" 
+                        id="departure" 
+                        onfocus="this.showPicker()" 
+                        required
+                    >
                 </div>
-                <a href="room-list.php">
-                    <button class="submit" type="button">
-                        CHECK AVAILABILITY
-                    </button>
-                </a>
+                <button class="submit" type="submit">
+                    CHECK AVAILABILITY
+                </button>
             </form>
         </div>
     </main>
