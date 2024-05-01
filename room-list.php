@@ -1,40 +1,53 @@
 <?php
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
-    require_once __DIR__ . '/utils/queries/getRooms.php';
+    require_once __DIR__ . '/utils/queries/checkAvailability.php';
 
-    $query = $getRooms;
+    $query = $checkAvailability;
 
     if($stmt = $connection->prepare($query)){
-        if(isset($_POST['arrival']) && isset($_POST['departure'])){
-            $arrival = $_POST['arrival'];
-            $departure = $_POST['departure'];
+        $checkArrival = isset($_GET['check_in']);
+        $checkDeparture = isset($_GET['check_out']);
+        
+        if( $checkArrival && $checkDeparture){
+            $arrival = $_GET['check_in'];
+            $departure = $_GET['check_out'];
+        } else{
+            echo "Invalid params";
+            exit;
         }
+
+        $stmt->bind_param('ss', $departure, $arrival);
+
+        if($stmt->execute()){
+            $results = $stmt->get_result();
+            $availableRooms = [];
+
+            if($results->num_rows > 0){
+                while ($row = $results->fetch_assoc()){
+                    $availableRooms[] = $row;
+                }
+            } else {
+                echo "No results";
+                exit;
+            }
+        } else{
+            echo "Error running query: " . $connection->error;
+            exit;
+        }
+
+        $stmt->close();
+    } else {
+        echo "Unable to GET data";
+        exit;
     }
 
-    print_r("check_in → " . $arrival);
-    echo "<br>";
-    print_r("check_out → " . $departure);
+    $connection->close();
 
-    // $results = $connection->query($query);
-
-    // $data = array();
-
-    // if($results->num_rows > 0){
-    //     while ($row = $results->fetch_assoc()){
-    //         $data[] = $row;
-    //     }
-    // } else {
-    //     echo "No results";
-    // }
-
-    // $connection->close();
-
-    // $template = 'room-list';
-    // $values = [
-    //     'title' => 'Rooms List',
-    //     'rooms' => $data
-    // ];
-
-    // renderTemplate($template, $values);
+    $template = 'room-list';
+    $values = [
+        'title' => 'Rooms List',
+        'rooms' => $availableRooms
+    ];
+    renderTemplate($template, $values);
 ?>

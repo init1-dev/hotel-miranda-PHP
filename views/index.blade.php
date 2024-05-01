@@ -23,26 +23,28 @@
         </div>
 
         <div class="main__form">
-            <form id="check-availability-form" action="room-list.php" method="POST">
+            <form id="check-availability-form" action="room-list.php">
                 <div class="input--container">
-                    <label for="arrival" class="input--text">Arrival Date</p>
+                    <label for="check_in" class="input--text">Arrival Date</p>
                     <input 
                         class="input" 
                         type="date" 
-                        name="arrival" 
-                        id="arrival" 
+                        name="check_in" 
+                        id="check_in" 
                         onfocus="this.showPicker()" 
+                        value="2024-08-07"
                         required
                     >
                 </div>
                 <div class="input--container">
-                    <label for="departure" class="input--text">Departure Date</p>
+                    <label for="check_out" class="input--text">Departure Date</p>
                     <input 
                         class="input" 
                         type="date" 
-                        name="departure" 
-                        id="departure" 
+                        name="check_out" 
+                        id="check_out" 
                         onfocus="this.showPicker()" 
+                        value="2024-08-12"
                         required
                     >
                 </div>

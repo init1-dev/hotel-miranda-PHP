@@ -15,6 +15,7 @@
         }
     } else {
         echo "No results";
+        exit;
     }
 
     $connection->close();

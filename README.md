@@ -8,3 +8,4 @@
 - contact form
 - index, offers offer room, popular, rooms-grid, room-list swiper use full (14) amenities from db
 - room-details Related Rooms (popular? all?)
+- install bladeOne with composer

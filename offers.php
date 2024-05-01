@@ -20,7 +20,8 @@
             }
         }
     } else {
-        echo "No results";
+        echo "No offers results";
+        exit;
     }
 
     $connection->close();
