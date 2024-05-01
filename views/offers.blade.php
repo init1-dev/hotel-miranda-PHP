@@ -170,7 +170,7 @@
                                     <i class="fa-solid fa-martini-glass-citrus"></i>
                                 @endif
                             </div>
-                            <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
+                            <img src={{ $room['photo'] }} alt={{'room' . $room['_id'] . "image"}}>
                             <div class="slide-info">
                                 <div class="description">
                                     <h2>{{$room['name']}}</h2>
