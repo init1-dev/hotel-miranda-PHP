@@ -22,7 +22,7 @@
         WHERE (
             booking.id IS NULL OR 
             (booking.check_in > ? OR booking.check_out <= ?)
-        ) AND room.status = "Available"
+        )
         GROUP BY
             room.id;
     ';

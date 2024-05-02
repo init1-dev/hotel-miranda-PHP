@@ -32,7 +32,7 @@
                         name="check_in" 
                         id="check_in" 
                         onfocus="this.showPicker()" 
-                        value="2024-08-07"
+                        value="2024-04-07"
                         required
                     >
                 </div>
@@ -44,7 +44,7 @@
                         name="check_out" 
                         id="check_out" 
                         onfocus="this.showPicker()" 
-                        value="2024-08-12"
+                        value="2024-04-12"
                         required
                     >
                 </div>
@@ -108,7 +108,7 @@
                     <div class="swiper-slide">
                         <div class="slide-title">
                             <div class="slide-title--group">
-                                @if(in_array('Single Bed', json_decode($room['amenities'], true)))
+                                {{-- @if(in_array('Single Bed', json_decode($room['amenities'], true)))
                                     <i class="fa-solid fa-bed"></i>
                                 @endif
                                 @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
@@ -128,6 +128,62 @@
                                 @endif
                                 @if(in_array('Shop Near', json_decode($room['amenities'], true)))
                                     <i class="fa-solid fa-martini-glass-citrus"></i>
+                                @endif --}}
+                                
+                                @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
+                                    <i class="fa-regular fa-snowflake"></i>
+                                @endif
+
+                                @if(in_array('Breakfast', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-utensils"></i>
+                                @endif
+
+                                @if(in_array('Cleaning', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-broom"></i>
+                                @endif
+
+                                @if(in_array('Grocery', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                @endif
+
+                                @if(in_array('Shop Near', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-shop"></i>
+                                @endif
+                            
+                                @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-wifi"></i>
+                                @endif
+                                
+                                @if(in_array('Kitchen', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-kitchen-set"></i>
+                                @endif
+                                
+                                @if(in_array('Shower', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-shower"></i>
+                                @endif
+
+                                @if(in_array('Single Bed', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-bed"></i>
+                                @endif
+
+                                @if(in_array('Towels', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-toilet-paper"></i>
+                                @endif
+
+                                @if(in_array('Strong Locker', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-lock"></i>
+                                @endif
+
+                                @if(in_array('Smart Security', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-key"></i>
+                                @endif
+
+                                @if(in_array('24/7 Online Support', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-headset"></i>
+                                @endif
+
+                                @if(in_array('Expert Team', json_decode($room['amenities'], true)))
+                                    <i class="fa-solid fa-people-group"></i>
                                 @endif
                             </div>
                         </div>

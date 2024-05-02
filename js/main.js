@@ -200,3 +200,33 @@ const aboutSwiper = new Swiper('#counter-swipper', {
         }
     }
 });
+
+const paginationSwiper = new Swiper('.pagination-swiper', {
+    slidesPerView: 1,
+    autoHeight: true,
+    grid: {
+        fill: 'row',
+        rows: 3
+    },
+    on: {
+        slideChange: function() {
+            let element = document.querySelector('.banner__breadcrumb');
+            element.scrollIntoView({
+                behavior: 'instant',
+                block: 'start'
+            })
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+    breakpoints: {
+        1000: {
+            autoHeight: true
+        }
+    }
+});
