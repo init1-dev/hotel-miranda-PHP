@@ -182,28 +182,7 @@
                     @foreach($popular as $room)
                         <div class="swiper-slide">
                             <div class="slide-title">
-                                {{-- @if(in_array('Single Bed', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-bed"></i>
-                                @endif
-                                @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-wifi"></i>
-                                @endif
-                                @if(in_array('Grocery', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-car"></i>
-                                @endif
-                                @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
-                                    <i class="fa-regular fa-snowflake"></i>
-                                @endif
-                                @if(in_array('Expert Team', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-dumbbell"></i>
-                                @endif
-                                @if(in_array('Breakfast', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-ban-smoking"></i>
-                                @endif
-                                @if(in_array('Shop Near', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-martini-glass-citrus"></i>
-                                @endif --}}
-
+                                
                                 @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
                                     <i class="fa-regular fa-snowflake"></i>
                                 @endif
