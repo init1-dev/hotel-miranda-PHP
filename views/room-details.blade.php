@@ -40,19 +40,35 @@
 
             <main class="main">
                 <div class="main__form">
-                    <form id="check-availability-form" action="">
+                    <form id="check-availability-form" class="booking-form" action="../utils/booking-form.php" method="POST">
                         <h4>Check Availability</h4>
                         <div class="input--container">
-                            <p class="input--text">Check In</p>
-                            <input class="input" type="date" name="arrival" id="arrival" onfocus="this.showPicker()">
+                            <label for="arrival" class="input--text">Check In</label>
+                            <input class="input" type="date" name="arrival" id="arrival" onfocus="this.showPicker()" value={{$check_in ? $check_in : '2025-06-23'}}>
                         </div>
                         <div class="input--container">
-                            <p class="input--text">Check Out</p>
-                            <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()">
+                            <label for="departure" class="input--text">Check Out</label>
+                            <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()" value={{$check_out ? $check_out : '2025-06-25'}}>
                         </div>
-                        <a href="room-list.php">
-                            <button class="submit" type="button">
-                                CHECK AVAILABILITY
+                        <div class="input--container">
+                            <label for="fullname" class="input--text">Fullname</label>
+                            <input class="input no-bg" type="text" name="fullname" id="fullname" value="in1t">
+                        </div>
+                        <div class="input--container">
+                            <label for="phone" class="input--text">Phone</label>
+                            <input class="input no-bg" type="text" name="phone" id="phone" value="600123456">
+                        </div>
+                        <div class="input--container">
+                            <label for="email" class="input--text">Email</label>
+                            <input class="input no-bg" type="text" name="email" id="email" value="email@correo.com">
+                        </div>
+                        <div class="input--container">
+                            <label for="special-request" class="input--text">Epecial request</label>
+                            <textarea class="input no-bg" name="special-request" id="special-request">Necesito una tonelada de pizza, por favor</textarea>
+                        </div>
+                        <a>
+                            <button class="submit" type="submit">
+                                {{ $check_in && $check_out ? 'BOOK NOW' : 'CHECK AVAILABILITY' }}
                             </button>
                         </a>
                     </form>

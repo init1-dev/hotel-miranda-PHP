@@ -21,7 +21,7 @@
         </div>
 
         <div class="rooms_grid">
-            <p class="counter" style="padding-bottom:1rem">Found <b>{{ count($rooms) }}</b> available rooms between <b>{{ date_format($arrival, 'd/m/Y')}}</b> and <b>{{ date_format($departure, 'd/m/Y')}}</b>..</p>
+            <p class="counter"><i></i>Found <b>{{ count($rooms) }}</b> rooms available between <b>{{ date_format(new DateTime($arrival), 'd/m/Y')}}</b> and <b>{{ date_format(new DateTime($departure), 'd/m/Y')}}</b></p>
 
             {{--  --}}
 
@@ -101,7 +101,10 @@
                                             <h2 class="rooms__card__info__price--price">${{ round($room['price'] / 100) }}</h2>
                                             <p class="rooms__card__info__price--night">/Night</p>
                                         </div>
-                                        <a style="all:unset;" href="room-details.php?id={{$room['_id']}}">
+                                        <a 
+                                            style="all:unset;" 
+                                            href="room-details.php?id={{$room['_id']}}&check_in={{$arrival}}&check_out={{$departure}}"
+                                        >
                                             <button class="rooms__card__info__price--button">Booking now</button>
                                         </a>
                                     </div>

@@ -54,36 +54,36 @@
 
         <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg" alt="">
 
-        <form action="">
+        <form  id="contact-form" action="../utils/contact-form.php" method="POST">
             <div class="groups">
                 <div class="group1">
                     <div class="name">
                         <i class="fa-solid fa-user"></i>
-                        <input class="input-text" type="text" name="" id="" placeholder="Your full name">
+                        <input class="input-text" type="text" name="fullname" id="fullname" placeholder="Your full name" required value="In1t">
                     </div>
 
                     <div class="number">
                         <i class="fa-solid fa-phone"></i>
-                        <input class="input-text" type="text" name="" id="" placeholder="Add phone number">
+                        <input class="input-text" type="text" name="phone" id="phone" placeholder="Add phone number" required value="600123456">
                     </div>
                 </div>
 
                 <div class="group2">
                     <div class="email">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="input-text" type="text" name="" id="" placeholder="Enter email address">
+                        <input class="input-text" type="text" name="email" id="email" placeholder="Enter email address" required value="email@email.com">
                     </div>
 
                     <div class="subject">
                         <i class="fa-solid fa-file-lines"></i>
-                        <input class="input-text" type="text" name="" id="" placeholder="Enter subject">
+                        <input class="input-text" type="text" name="subject" id="subject" placeholder="Enter subject" required value="test message">
                     </div>
                 </div>
             </div>
 
             <div class="message">
                 <i class="fa-solid fa-pencil"></i>
-                <textarea class="text-area" name="" id="" cols="30" rows="10" placeholder="Enter message"></textarea>
+                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Enter message" required>this is a lorem ipsum test message for testing</textarea>
             </div>
 
             <button type="submit">SEND</button>

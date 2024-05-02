@@ -6,12 +6,9 @@
     $query = $getRoom;
 
     if($stmt = $connection->prepare($query)){
-        if(isset($_GET['id'])){
-            $id = $_GET['id'];
-        } else{
-            echo "Invalid 'id' param";
-            exit;
-        }
+        $id = $_GET['id'];
+        $check_in = $_GET['check_in'];
+        $check_out = $_GET['check_out'];
 
         $stmt->bind_param('i', $id);
 
@@ -35,7 +32,9 @@
     $template = 'room-details';
     $values = [
         'title' => 'Room Details',
-        'room' => $row
+        'room' => $row,
+        'check_in' => $check_in,
+        'check_out' => $check_out
     ];
 
     renderTemplate($template, $values);

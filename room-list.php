@@ -48,8 +48,8 @@
     $values = [
         'title' => 'Rooms List',
         'rooms' => $availableRooms,
-        'arrival' => new DateTime($arrival),
-        'departure' => new DateTime($departure)
+        'arrival' => $arrival,
+        'departure' => $departure
     ];
     renderTemplate($template, $values);
 ?>

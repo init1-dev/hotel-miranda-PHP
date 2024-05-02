@@ -1385,6 +1385,11 @@
   background: #007aff;
 }
 
+.rooms--list .counter {
+  margin-bottom: 2rem;
+  font-weight: lighter;
+  font-size: 15px;
+}
 @media (min-width: 1000px) {
   .rooms--list .rooms_grid {
     padding: 0;
@@ -1548,6 +1553,7 @@
   .room-details .main {
     margin-top: unset;
     padding-top: unset;
+    width: 30%;
   }
 }
 .room-details .main__form {
@@ -1573,7 +1579,9 @@
 }
 @media (min-width: 1000px) {
   .room-details .main__form #check-availability-form h4 {
-    width: 100%;
+    font-size: 22px;
+    width: 17rem;
+    margin-bottom: 2rem;
   }
 }
 .room-details .main__form #check-availability-form .input--container {
@@ -1581,14 +1589,18 @@
   margin-bottom: 1rem;
   margin-right: unset;
 }
-.room-details .main__form #check-availability-form .input--container p {
+.room-details .main__form #check-availability-form .input--container label {
   font-size: 14px;
 }
 .room-details .main__form #check-availability-form .input--container .input {
+  margin-top: 0.2rem;
   background-color: #F8F8F8;
   padding: 1rem 1rem 1rem 1rem;
   border: unset;
   background-position: 90%;
+}
+.room-details .main__form #check-availability-form .input--container .no-bg {
+  background-image: unset;
 }
 .room-details .main__form #check-availability-form .submit {
   margin-left: unset;
@@ -1596,7 +1608,7 @@
 }
 @media (min-width: 1000px) {
   .room-details .main__form #check-availability-form .submit {
-    width: 100%;
+    width: 17rem;
   }
 }
 .room-details .main__form .input--text {
@@ -1610,10 +1622,10 @@
 @media (min-width: 1000px) {
   .room-details__room-content {
     display: flex;
-    justify-content: center;
     gap: 5rem;
-    margin: 1rem 5rem 2rem 5rem;
-    width: 85vw;
+    margin: 1rem auto 2rem auto;
+    width: 82vw;
+    align-items: center;
   }
 }
 .room-details__room-content .info {
@@ -1622,6 +1634,7 @@
 @media (min-width: 1000px) {
   .room-details__room-content .info {
     margin-top: 1.5rem;
+    width: 70%;
   }
 }
 .room-details__room-content .info .info_container {
@@ -1718,8 +1731,8 @@
 }
 @media (min-width: 1000px) {
   .room-details__room-content .info img {
-    height: 25rem;
     width: 100%;
+    max-height: unset;
   }
 }
 .room-details .info-container {
@@ -2546,7 +2559,7 @@
   margin-bottom: 1rem;
   background-color: #F8F8F8;
   border: unset;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   padding-left: 3rem;
   font-family: Roboto;
   font-size: 16px;

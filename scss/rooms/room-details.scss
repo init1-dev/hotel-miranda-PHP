@@ -28,6 +28,7 @@
         @media (min-width: 1000px) {
             margin-top: unset;
             padding-top: unset;
+            width: 30%;
         }
     
         &__form {
@@ -50,7 +51,9 @@
                     margin-bottom: 1.5rem;
 
                     @media (min-width: 1000px) {
-                        width: 100%;
+                        font-size: 22px;
+                        width: 17rem;
+                        margin-bottom: 2rem;
                     }
                 }
 
@@ -59,15 +62,20 @@
                     margin-bottom: 1rem;
                     margin-right: unset;
 
-                    p {
+                    label {
                         font-size: 14px;
                     }
 
                     .input {
+                        margin-top: 0.2rem;
                         background-color: #F8F8F8;
                         padding: 1rem 1rem 1rem 1rem;
                         border: unset;
                         background-position: 90%;
+                    }
+
+                    .no-bg {
+                        background-image: unset;
                     }
                 }
 
@@ -76,7 +84,7 @@
                     width: 100%;
 
                     @media (min-width: 1000px) {
-                        width: 100%;
+                        width: 17rem;
                     }
                 }
             }
@@ -95,10 +103,11 @@
 
         @media (min-width: 1000px) {
             display: flex;
-            justify-content: center;
             gap: 5rem;
-            margin: 1rem 5rem 2rem 5rem;
-            width: 85vw;
+            // justify-content: center;
+            margin: 1rem auto 2rem auto;
+            width: 82vw;
+            align-items: center;
         }
 
         .info {
@@ -106,6 +115,7 @@
 
             @media (min-width: 1000px) {
                 margin-top: 1.5rem;
+                width: 70%;
             }
             
             .info_container {
@@ -202,8 +212,9 @@
                 aspect-ratio: 16/9;
 
                 @media (min-width: 1000px) {
-                    height: 25rem;
+                    // height: 25rem;
                     width: 100%;
+                    max-height: unset;
                 }
             }
         }

@@ -74,7 +74,44 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             }
-        })
+        });
+
+        $( ".booking-form" ).on( "submit", function( event ) {
+            event.preventDefault();
+            swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Booked ordered successfully",
+                showConfirmButton: false,
+                timer: 1500
+            })
+            document.getElementById('booking-form').reset();
+        });
+
+        $( "#contact-form" ).on( "submit", function( event ) {
+            event.preventDefault();
+            swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Form submitted successfully",
+                showConfirmButton: false,
+                timer: 1500
+            })
+            document.getElementById('contact-form').reset();
+        });
+
+        
+
+        // $('#').on("submit", function(event){
+        //     swal({
+        //         position: "top-end",
+        //         type: "success",
+        //         title: "Your work has been saved",
+        //         showConfirmButton: false,
+        //         timer: 1500
+        //     })
+        // });
+
     });
 });
 
@@ -262,7 +299,6 @@ const paginationGridSwiper = new Swiper('.pagination-swiper-grid', {
                 rows: 3
             },
             spaceBetween: 20
-            // autoHeight: true
         }
     }
 });

@@ -1,5 +1,11 @@
 .rooms--list {
 
+    .counter {
+        margin-bottom:2rem;
+        font-weight: lighter;
+        font-size: 15px;
+    }
+
     .rooms_grid {
     
         @media (min-width: 1000px) {
