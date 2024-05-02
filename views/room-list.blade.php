@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    <section class="rooms__list__section rooms--grid">
+    <section class="rooms__list__section rooms--list">
         <div class="main">
             <div class="main__container">
                 <div class="main__upper">

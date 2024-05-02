@@ -212,7 +212,7 @@ const paginationSwiper = new Swiper('.pagination-swiper', {
         slideChange: function() {
             let element = document.querySelector('.banner__breadcrumb');
             element.scrollIntoView({
-                behavior: 'instant',
+                behavior: 'smooth',
                 block: 'start'
             })
         }
@@ -227,6 +227,42 @@ const paginationSwiper = new Swiper('.pagination-swiper', {
     breakpoints: {
         1000: {
             autoHeight: true
+        }
+    }
+});
+
+const paginationGridSwiper = new Swiper('.pagination-swiper-grid', {
+    slidesPerView: 1,
+    autoHeight: true,
+    grid: {
+        fill: 'row',
+        rows: 3
+    },
+    on: {
+        slideChange: function() {
+            let element = document.querySelector('.banner__breadcrumb');
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+    breakpoints: {
+        1000: {
+            slidesPerView: 3,
+            grid: {
+                fill: 'row',
+                rows: 3
+            },
+            spaceBetween: 20
+            // autoHeight: true
         }
     }
 });
