@@ -51,7 +51,7 @@
 
                         <div class="info__specs">
                             <div class="info__specs--text">
-                                <p class="description">{{$room['desc']}}</p>
+                                <p class="description limit-2 height-2">{{$room['desc']}}</p>
                                 <div class="main__buttons">
                                     <a style="all:unset;" href="room-details.php?id={{$room['id']}}">
                                         <button class="color">BOOK NOW</button>
@@ -102,8 +102,8 @@
                             <img src={{ $room['photo'] }} alt={{'room' . $room['id'] . "image"}}>
                             <div class="slide-info">
                                 <div class="description">
-                                    <h2>{{$room['name']}}</h2>
-                                    <p>{{ $room['desc'] }}</p>
+                                    <h2 class="limit-1">{{ $room['name'] . " " . $room['type'] }}</h2>
+                                    <p class="limit-2 height-2">{{ $room['desc'] }}</p>
                                 </div>
                                 <div class="rooms__card__info__price">
                                     <div>

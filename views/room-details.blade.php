@@ -126,83 +126,38 @@
             <div id="rooms-swiper-normal" class="room-swiper">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="slide-title">
-                            <div class="slide-title--group">
-                                <i class="fa-solid fa-bed"></i>
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-car"></i>
-                                <i class="fa-regular fa-snowflake"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-ban-smoking"></i>
-                                <i class="fa-solid fa-martini-glass-citrus"></i>
-                            </div>
-                        </div>
-                        <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
-                        <div class="slide-info">
-                            <div class="description">
-                                <h2>Minimal Duplex Room</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-                            <div class="rooms__card__info__price">
-                                <h2 class="rooms__card__info__price--price">$345</h2>
-                                <p class="rooms__card__info__price--night">/Night</p>
-                                <button class="rooms__card__info__price--button">Booking now</button>
-                            </div>
-                        </div>
-                    </div>
+                @foreach($related as $room)
 
                     <div class="swiper-slide">
                         <div class="slide-title">
                             <div class="slide-title--group">
-                                <i class="fa-solid fa-bed"></i>
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-car"></i>
-                                <i class="fa-regular fa-snowflake"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-ban-smoking"></i>
-                                <i class="fa-solid fa-martini-glass-citrus"></i>
+
+                                @foreach ($room['amenities'] as $amenity)
+                                    {!! getAmenity($amenity) !!}
+                                @endforeach
+                                
                             </div>
                         </div>
                         <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
                         <div class="slide-info">
                             <div class="description">
-                                <h2>Minimal Duplex Room</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                <h2 class="limit-1">{{ $room['name'] . " " . $room['type'] }}</h2>
+                                <p class="limit-2 height-2">{{ $room['desc'] }}</p>
                             </div>
                             <div class="rooms__card__info__price">
-                                <h2 class="rooms__card__info__price--price">$345</h2>
-                                <p class="rooms__card__info__price--night">/Night</p>
-                                <button class="rooms__card__info__price--button">Booking now</button>
+                                <div>
+                                    <h2 class="rooms__card__info__price--price">${{ $room['discount'] }}</h2>
+                                    <p class="rooms__card__info__price--night">/Night</p>
+                                </div>
+                                <a style="all:unset;" href="room-details.php?id={{$room['id']}}">
+                                        <button class="rooms__card__info__price--button">Booking now</button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <div class="slide-title">
-                            <div class="slide-title--group">
-                                <i class="fa-solid fa-bed"></i>
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-car"></i>
-                                <i class="fa-regular fa-snowflake"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-ban-smoking"></i>
-                                <i class="fa-solid fa-martini-glass-citrus"></i>
-                            </div>
-                        </div>
-                        <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
-                        <div class="slide-info">
-                            <div class="description">
-                                <h2>Minimal Duplex Room</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                            </div>
-                            <div class="rooms__card__info__price">
-                                <h2 class="rooms__card__info__price--price">$345</h2>
-                                <p class="rooms__card__info__price--night">/Night</p>
-                                <button class="rooms__card__info__price--button">Booking now</button>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
+
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>

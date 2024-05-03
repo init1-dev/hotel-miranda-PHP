@@ -119,8 +119,8 @@
                         <img src={{$room['photo']}} alt="Imagen 1">
                         <div class="slide-info">
                             <div class="description">
-                                <h2>{{$room['name']}}</h2>
-                                <p>{{$room['desc']}}</p>
+                                <h2 class="limit-1">{{ $room['name'] . " " . $room['type'] }}</h2>
+                                <p class="limit-2 height-2">{{$room['desc']}}</p>
                             </div>
                             <div class="price">
                                 <h2>${{ $room['discount'] }}</h2>

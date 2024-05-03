@@ -347,6 +347,8 @@
   color: #222222;
 }
 #rooms #rooms-swiper .slide-info .description p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
@@ -1322,13 +1324,10 @@
     max-height: 100px;
   }
 }
-.rooms--grid .rooms_grid .rooms__card__info__description--description {
-  line-height: 24px;
-  min-height: 48px;
-}
 @media (min-width: 1000px) {
   .rooms--grid .rooms_grid .rooms__card__info__description--description {
     padding: 0 1rem 0 0;
+    margin-bottom: 1.5rem;
   }
 }
 .rooms--grid .rooms_grid .rooms__card__info__price {
@@ -2374,10 +2373,6 @@
 }
 .offers .swiper--bg #rooms-swiper-normal .swiper-slide .slide-info .description h2 {
   margin-top: 0.5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 @media (min-width: 1000px) {
   .offers .swiper--bg #rooms-swiper-normal .swiper-slide .slide-info .description h2 {
@@ -2386,12 +2381,6 @@
 }
 .offers .swiper--bg #rooms-swiper-normal .swiper-slide .slide-info .description p {
   margin-top: 1rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  line-height: 24px;
-  min-height: 48px;
 }
 .offers .swiper--bg #rooms-swiper-normal .swiper-slide .slide-info .rooms__card__info__price {
   display: flex;
@@ -2708,6 +2697,7 @@
   font-size: 14px;
   line-height: 24px;
   color: #777777;
+  margin-top: 1rem;
 }
 #rooms-swiper .slide-info .price h2, #rooms-swiper .slide-info .price p, #rooms-swiper-normal .slide-info .price h2, #rooms-swiper-normal .slide-info .price p {
   display: inline-block;
@@ -3786,6 +3776,12 @@
   }
 }
 
+.rooms__card__info__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
 .rooms__card__info__price--price, .rooms__card__info__price--night {
   display: inline-block;
   font-family: Archivo;
@@ -3922,6 +3918,25 @@ body .swiper-button-next {
 }
 body .swiper-pagination-bullet {
   background-color: #BEAD8E;
+}
+
+.limit-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.limit-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.height-2 {
+  line-height: 24px;
+  min-height: 48px;
 }
 
 .--max-width {

@@ -391,10 +391,6 @@
 
                         h2 {
                             margin-top: 0.5rem;
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 1;
-                            -webkit-box-orient: vertical;
 
                             @media (min-width: 1000px) {
                                 margin-top: 1.5rem;
@@ -403,12 +399,6 @@
 
                         p {
                             margin-top: 1rem;
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 2;
-                            -webkit-box-orient: vertical;
-                            line-height: 24px;
-                            min-height: calc(24px * 2);
                         }
                     }
 

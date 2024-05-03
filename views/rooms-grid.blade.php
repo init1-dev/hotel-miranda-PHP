@@ -38,8 +38,8 @@
 
                                 <div class="rooms__card__info">
                                     <div class="rooms__card__info__description">
-                                        <h2 class="rooms__card__info__description--title">Room {{$room['number'] . " " . $room['type']}}</h2>
-                                        <p class="rooms__card__info__description--description">{{ $room['desc'] }}</p>
+                                        <h2 class="rooms__card__info__description--title limit-1">Room {{$room['number'] . " " . $room['type']}}</h2>
+                                        <p class="rooms__card__info__description--description limit-2 height-2">{{ $room['desc'] }}</p>
                                     </div>
                                     <div class="rooms__card__info__price">
                                         <div>

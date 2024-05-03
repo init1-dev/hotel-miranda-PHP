@@ -81,11 +81,10 @@
                     }
     
                     &--description {
-                        line-height: 24px;
-                        min-height: calc(24px * 2);
     
                         @media (min-width: 1000px) {
                             padding: 0 1rem 0 0;
+                            margin-bottom: 1.5rem;
                         }
                     }
                 }
