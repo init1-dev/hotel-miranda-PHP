@@ -55,7 +55,7 @@
 
         <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg" alt="">
 
-        <form  id="contact-form" action="../utils/contact-form.php" method="POST">
+        <form  id="contact-form" action="../utils/forms/contact-form.php" method="POST">
             <div class="groups">
                 <div class="group1">
                     <div class="name">

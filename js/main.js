@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "Booked ordered successfully",
+                title: "Booking ordered successfully",
                 showConfirmButton: false,
                 timer: 1500
             })
