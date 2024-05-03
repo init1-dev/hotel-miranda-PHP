@@ -62,103 +62,13 @@
 
                             <div class="info__specs--icons">
                                 <ul class="list">
-                                    {{-- @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-fan"></i>
-                                            <p class="spec--text">Air conditioner </p>
-                                        </li>
-                                    @endif
 
-                                    @if(in_array('Breakfast', json_decode($room['amenities'], true)))
+                                    @foreach ($room['amenities'] as $amenity)
                                         <li class="spec">
-                                            <i class="fa-solid fa-utensils"></i>
-                                            <p class="spec--text">Breakfast</p>
+                                            {!! getAmenity($amenity) !!}
+                                            <p class="spec--text">{{$amenity}}</p>
                                         </li>
-                                    @endif
-
-                                    @if(in_array('Cleaning', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-broom"></i>
-                                            <p class="spec--text">Cleaning</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Grocery', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-basket-shopping"></i>
-                                            <p class="spec--text">Grocery</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Shop Near', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-shop"></i>
-                                            <p class="spec--text">Shop near</p>
-                                        </li>
-                                    @endif
-                                
-                                    @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-wifi"></i>
-                                            <p class="spec--text">Fast WiFi</p>
-                                        </li>
-                                    @endif
-                                    
-                                    @if(in_array('Kitchen', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-kitchen-set"></i>
-                                            <p class="spec--text">Kitchen</p>
-                                        </li>
-                                    @endif
-                                    
-                                    @if(in_array('Shower', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-shower"></i>
-                                            <p class="spec--text">Shower</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Single Bed', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-bed"></i>
-                                            <p class="spec--text">Single bed</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Towels', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-toilet-paper"></i>
-                                            <p class="spec--text">Towels</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Strong Locker', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-lock"></i>
-                                            <p class="spec--text">Strong Locker</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Smart Security', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-key"></i>
-                                            <p class="spec--text">Smart Security</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('24/7 Online Support', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-headset"></i>
-                                            <p class="spec--text">24/7 Online Support</p>
-                                        </li>
-                                    @endif
-
-                                    @if(in_array('Expert Team', json_decode($room['amenities'], true)))
-                                        <li class="spec">
-                                            <i class="fa-solid fa-people-group"></i>
-                                            <p class="spec--text">Expert Team</p>
-                                        </li>
-                                    @endif --}}
+                                    @endforeach
                                     
                                 </ul>
                             </div>
@@ -183,62 +93,11 @@
                     @foreach($popular as $room)
                         <div class="swiper-slide">
                             <div class="slide-title">
+
+                                @foreach ($room['amenities'] as $amenity)
+                                    {!! getAmenity($amenity) !!}
+                                @endforeach
                                 
-                                {{-- @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
-                                    <i class="fa-regular fa-snowflake"></i>
-                                @endif
-
-                                @if(in_array('Breakfast', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-utensils"></i>
-                                @endif
-
-                                @if(in_array('Cleaning', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-broom"></i>
-                                @endif
-
-                                @if(in_array('Grocery', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                @endif
-
-                                @if(in_array('Shop Near', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-shop"></i>
-                                @endif
-                            
-                                @if(in_array('High Speed Wifi', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-wifi"></i>
-                                @endif
-                                
-                                @if(in_array('Kitchen', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-kitchen-set"></i>
-                                @endif
-                                
-                                @if(in_array('Shower', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-shower"></i>
-                                @endif
-
-                                @if(in_array('Single Bed', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-bed"></i>
-                                @endif
-
-                                @if(in_array('Towels', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-toilet-paper"></i>
-                                @endif
-
-                                @if(in_array('Strong Locker', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-lock"></i>
-                                @endif
-
-                                @if(in_array('Smart Security', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-key"></i>
-                                @endif
-
-                                @if(in_array('24/7 Online Support', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-headset"></i>
-                                @endif
-
-                                @if(in_array('Expert Team', json_decode($room['amenities'], true)))
-                                    <i class="fa-solid fa-people-group"></i>
-                                @endif --}}
                             </div>
                             <img src={{ $room['photo'] }} alt={{'room' . $room['id'] . "image"}}>
                             <div class="slide-info">
