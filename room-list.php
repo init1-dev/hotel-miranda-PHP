@@ -2,6 +2,8 @@
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/checkAvailability.php';
+    require_once __DIR__ . '/utils/room/formRoomData.php';
+    require_once __DIR__ . '/utils/room/getAmenity.php';
 
     if($stmt = $connection->prepare($checkAvailability)){
         $checkArrival = isset($_GET['check_in']);
@@ -35,6 +37,9 @@
         }
 
         $stmt->close();
+
+        $formatedRooms = formRoomData($availableRooms);
+        
     } else {
         echo "Unable to GET data";
         exit;
@@ -43,7 +48,7 @@
     $connection->close();
 
     $values = [
-        'rooms' => $availableRooms,
+        'rooms' => $formatedRooms,
         'arrival' => $arrival,
         'departure' => $departure
     ];

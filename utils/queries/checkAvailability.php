@@ -11,14 +11,18 @@
             room.offer,
             room.price,
             room.cancellation,
-            json_arrayagg(amenity.name) as amenities,
+            amenity_names.amenities AS amenities,
             room.discount,
             room.status
         FROM room
-        LEFT JOIN booking ON room.id = booking.room_id
         INNER JOIN room_type ON room.room_type_id = room_type.id
-        LEFT JOIN room_amenities ON room.id = room_amenities.room_id
-        LEFT JOIN amenity ON room_amenities.amenity_id = amenity.id
+        LEFT JOIN booking ON room.id = booking.room_id
+        LEFT JOIN (
+            SELECT room_id, JSON_ARRAYAGG(amenity.name) AS amenities
+            FROM room_amenities
+            LEFT JOIN amenity ON room_amenities.amenity_id = amenity.id
+            GROUP BY room_id
+        ) AS amenity_names ON room.id = amenity_names.room_id
         WHERE (
             booking.id IS NULL OR 
             (booking.check_in > ? OR booking.check_out <= ?)
