@@ -3964,4 +3964,8 @@ body .swiper-pagination-bullet {
   }
 }
 
+body {
+  user-select: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
