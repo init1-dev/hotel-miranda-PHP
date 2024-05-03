@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="rooms__card__info__price">
                                         <div>
-                                            <h2 class="rooms__card__info__price--price">${{ $room['price'] }}</h2>
+                                            <h2 class="rooms__card__info__price--price">${{ $room['discount'] }}</h2>
                                             <p class="rooms__card__info__price--night">/Night</p>
                                         </div>
                                         <a 

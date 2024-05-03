@@ -1322,6 +1322,10 @@
     max-height: 100px;
   }
 }
+.rooms--grid .rooms_grid .rooms__card__info__description--description {
+  line-height: 24px;
+  min-height: 48px;
+}
 @media (min-width: 1000px) {
   .rooms--grid .rooms_grid .rooms__card__info__description--description {
     padding: 0 1rem 0 0;
@@ -2386,6 +2390,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-height: 24px;
+  min-height: 48px;
 }
 .offers .swiper--bg #rooms-swiper-normal .swiper-slide .slide-info .rooms__card__info__price {
   display: flex;

@@ -32,16 +32,16 @@
                     <div class="rooms__card--info">
                         <div class="info__details">
                             <div class="info__details--name">
-                                <h2 class="type">{{strtoupper($room['room_type'])}}</h2>
+                                <h2 class="type">{{strtoupper($room['type'])}}</h2>
                                 <p class="name">{{$room['name']}}</p>
                             </div>
                             <div class="price">
                                 <div class="regular-price">
-                                    <p class="price">${{ round($room['price'] / 100) }}</p>
+                                    <p class="price">${{ $room['price'] }}</p>
                                     <p class="night">/Night</p>
                                 </div>
                                 <div class="offer-price">
-                                    <p class="price">${{ round(($room['price'] / 100) * ( 1 - $room['discount'] / 100)) }}</p>
+                                    <p class="price">${{ $room['discount'] }}</p>
                                     <p class="night">/Night</p>
                                 </div>
                             </div>
@@ -51,9 +51,9 @@
 
                         <div class="info__specs">
                             <div class="info__specs--text">
-                                <p class="description">{{$room['description']}}</p>
+                                <p class="description">{{$room['desc']}}</p>
                                 <div class="main__buttons">
-                                    <a style="all:unset;" href="room-details.php?id={{$room['_id']}}">
+                                    <a style="all:unset;" href="room-details.php?id={{$room['id']}}">
                                         <button class="color">BOOK NOW</button>
                                     </a>
                                     <button class="dark">GALLERY</button>
@@ -62,7 +62,7 @@
 
                             <div class="info__specs--icons">
                                 <ul class="list">
-                                    @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
+                                    {{-- @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
                                         <li class="spec">
                                             <i class="fa-solid fa-fan"></i>
                                             <p class="spec--text">Air conditioner </p>
@@ -158,7 +158,7 @@
                                             <i class="fa-solid fa-people-group"></i>
                                             <p class="spec--text">Expert Team</p>
                                         </li>
-                                    @endif
+                                    @endif --}}
                                     
                                 </ul>
                             </div>
@@ -184,7 +184,7 @@
                         <div class="swiper-slide">
                             <div class="slide-title">
                                 
-                                @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
+                                {{-- @if(in_array('Air Conditioner', json_decode($room['amenities'], true)))
                                     <i class="fa-regular fa-snowflake"></i>
                                 @endif
 
@@ -238,20 +238,20 @@
 
                                 @if(in_array('Expert Team', json_decode($room['amenities'], true)))
                                     <i class="fa-solid fa-people-group"></i>
-                                @endif
+                                @endif --}}
                             </div>
-                            <img src={{ $room['photo'] }} alt={{'room' . $room['_id'] . "image"}}>
+                            <img src={{ $room['photo'] }} alt={{'room' . $room['id'] . "image"}}>
                             <div class="slide-info">
                                 <div class="description">
                                     <h2>{{$room['name']}}</h2>
-                                    <p>{{ $room['description'] }}</p>
+                                    <p>{{ $room['desc'] }}</p>
                                 </div>
                                 <div class="rooms__card__info__price">
                                     <div>
-                                        <h2 class="rooms__card__info__price--price">${{ round($room['price'] / 100) }}</h2>
+                                        <h2 class="rooms__card__info__price--price">${{ $room['price'] }}</h2>
                                         <p class="rooms__card__info__price--night">/Night</p>
                                     </div>
-                                    <a style="all:unset;" href="room-details.php?id={{$room['_id']}}">
+                                    <a style="all:unset;" href="room-details.php?id={{$room['id']}}">
                                         <button class="rooms__card__info__price--button">Booking now</button>
                                     </a>
                                 </div>

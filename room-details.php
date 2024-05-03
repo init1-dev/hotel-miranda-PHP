@@ -2,6 +2,8 @@
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/getRoom.php';
+    require_once __DIR__ . '/utils/room/formRoomData.php';
+    require_once __DIR__ . '/utils/room/getAmenity.php';
 
     if($stmt = $connection->prepare($getRoom)){
         $id = $_GET['id'];
@@ -20,6 +22,9 @@
         }
 
         $stmt->close();
+
+        $formatedRoom = formRoomData([$row])[0];
+
     } else {
         echo "Unable to GET 'id' from url";
         exit;
@@ -28,7 +33,7 @@
     $connection->close();
 
     $values = [
-        'room' => $row,
+        'room' => $formatedRoom,
         'check_in' => $check_in,
         'check_out' => $check_out
     ];

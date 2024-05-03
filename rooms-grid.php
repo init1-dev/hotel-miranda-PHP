@@ -2,6 +2,8 @@
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/getRooms.php';
+    require_once __DIR__ . '/utils/room/formRoomData.php';
+    require_once __DIR__ . '/utils/room/getAmenity.php';
 
     $results = $connection->query($getRooms);
 
@@ -18,8 +20,10 @@
 
     $connection->close();
 
+    $formatedRooms = formRoomData($data);
+
     $values = [
-        'rooms' => $data
+        'rooms' => $formatedRooms
     ];
 
     renderTemplate('rooms-grid', $values);

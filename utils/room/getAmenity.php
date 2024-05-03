@@ -17,19 +17,6 @@
             '24/7 Online Support' => '<i class="fa-solid fa-headset"></i>',
             'Expert Team' => '<i class="fa-solid fa-people-group"></i>',
         ];
-        // if($type === 'details'){
-        //     return '<li class="amenity">'
-        //                 . $amenities[$amenity] .
-        //                 '<p>'. $amenity .'</p>' .
-        //             '</li>';
-        // } elseif ($type === 'offers'){
-        //     return '<li class="spec">'
-        //                 . $amenities[$amenity] .
-        //                 '<p class="spec--text">' . $amenity . '</p>' .
-        //             '</li>';
-        // } else {
-        //     return $amenities[$amenity];
-        // }
         return $amenities[$amenity];
     }
 

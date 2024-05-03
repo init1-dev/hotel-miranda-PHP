@@ -2,6 +2,8 @@
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/getRooms.php';
+    require_once __DIR__ . '/utils/room/formRoomData.php';
+    require_once __DIR__ . '/utils/room/getAmenity.php';
 
     $results = $connection->query($getRooms);
 
@@ -24,9 +26,12 @@
 
     $connection->close();
 
+    $formatedOffers = formRoomData($offersData);
+    $formatedPopular = formRoomData($popularData);
+
     $values = [
-        'offers' => $offersData,
-        'popular' => $popularData
+        'offers' => $formatedOffers,
+        'popular' => $formatedPopular
     ];
 
     renderTemplate('offers', $values);
