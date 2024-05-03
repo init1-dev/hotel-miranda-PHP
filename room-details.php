@@ -2,39 +2,23 @@
     require_once __DIR__ . '/utils/renderTemplate.php';
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/getRoom.php';
-    require_once __DIR__ . '/utils/queries/getRoomsLimit.php';
+    require_once __DIR__ . '/utils/queries/getPopularRooms.php';
     require_once __DIR__ . '/utils/room/formRoomData.php';
     require_once __DIR__ . '/utils/room/getAmenity.php';
+    require_once __DIR__ . '/utils/executeQuery.php';
+    require_once __DIR__ . '/utils/executeQueryWithParams.php';
 
-    $results = $connection->query($getRoomsLimit);
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
+    $check_in = isset($_GET['check_in']) ? $_GET['check_in'] : null;
+    $check_out = isset($_GET['check_out']) ? $_GET['check_out'] : null;
 
-    $stmt = $connection->prepare($getRoom);
+    $roomDetails = executeQueryWithParams($connection, $getRoom, 'i', [$id]);
+    $relatedRooms = executeQuery($connection, $getPopularRooms);
 
-    $id = $_GET['id'];
-    $check_in = $_GET['check_in'];
-    $check_out = $_GET['check_out'];
-
-    $stmt->bind_param('i', $id);
-    $stmt->execute();
-    
-    $roomResults = $stmt->get_result();
-    $room = $roomResults->fetch_assoc();
-    $stmt->close();
     $connection->close();
 
-    $relatedData = [];
-    
-    if($results->num_rows > 0){
-        while ($row = $results->fetch_assoc()){
-            $relatedData[] =  $row;
-        }
-    } else {
-        echo "No results";
-        exit;
-    }
-
-    $formatedRoom = formRoomData([$room])[0];
-    $formatedRelated = formRoomData($relatedData);
+    $formatedRoom = formRoomData($roomDetails);
+    $formatedRelated = formRoomData($relatedRooms);
 
     $values = [
         'room' => $formatedRoom,

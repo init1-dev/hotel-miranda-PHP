@@ -14,8 +14,6 @@
         $arrival
     ]);
 
-    echo count($availableRooms);
-
     $connection->close();
     
     $formatedRooms = formRoomData($availableRooms);
