@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Our rooms')
 @section('content')
     <section class="rooms__list__section rooms--list">
         <div class="main">

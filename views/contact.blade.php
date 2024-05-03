@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Contact us')
 @section('content')
     <div class="main">
         <div class="main__container">

@@ -3,12 +3,10 @@
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/getRooms.php';
 
-    $query = $getRooms;
+    $results = $connection->query($getRooms);
 
-    $results = $connection->query($query);
-
-    $offersData = array();
-    $popularData = array();
+    $offersData = [];
+    $popularData = [];
 
     if($results->num_rows > 0){
         while ($row = $results->fetch_assoc()){
@@ -26,12 +24,10 @@
 
     $connection->close();
 
-    $template = 'offers';
     $values = [
-        'title' => 'Hotel Miranda Offers',
         'offers' => $offersData,
         'popular' => $popularData
     ];
 
-    renderTemplate($template, $values);
+    renderTemplate('offers', $values);
 ?>

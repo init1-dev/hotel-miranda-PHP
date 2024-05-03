@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'About Hotel Miranda')
 @section('content')
     <section class="about__section">
 

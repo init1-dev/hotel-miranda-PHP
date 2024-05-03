@@ -3,9 +3,7 @@
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/checkAvailability.php';
 
-    $query = $checkAvailability;
-
-    if($stmt = $connection->prepare($query)){
+    if($stmt = $connection->prepare($checkAvailability)){
         $checkArrival = isset($_GET['check_in']);
         $checkDeparture = isset($_GET['check_out']);
         
@@ -44,12 +42,10 @@
 
     $connection->close();
 
-    $template = 'room-list';
     $values = [
-        'title' => 'Rooms List',
         'rooms' => $availableRooms,
         'arrival' => $arrival,
         'departure' => $departure
     ];
-    renderTemplate($template, $values);
+    renderTemplate('room-list', $values);
 ?>

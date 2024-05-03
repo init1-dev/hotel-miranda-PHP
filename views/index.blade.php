@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Hotel Miranda')
 @section('content')
     <main id="main" class="main">
         <div class="main__container">

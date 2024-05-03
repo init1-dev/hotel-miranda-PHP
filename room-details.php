@@ -3,9 +3,7 @@
     require_once __DIR__ . '/utils/connection.php';
     require_once __DIR__ . '/utils/queries/getRoom.php';
 
-    $query = $getRoom;
-
-    if($stmt = $connection->prepare($query)){
+    if($stmt = $connection->prepare($getRoom)){
         $id = $_GET['id'];
         $check_in = $_GET['check_in'];
         $check_out = $_GET['check_out'];
@@ -29,13 +27,11 @@
 
     $connection->close();
 
-    $template = 'room-details';
     $values = [
-        'title' => 'Room Details',
         'room' => $row,
         'check_in' => $check_in,
         'check_out' => $check_out
     ];
 
-    renderTemplate($template, $values);
+    renderTemplate('room-details', $values);
 ?>
