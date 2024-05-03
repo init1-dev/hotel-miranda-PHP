@@ -9,11 +9,14 @@
     $results = $connection->query($getRoomsLimit);
 
     $stmt = $connection->prepare($getRoom);
+
     $id = $_GET['id'];
     $check_in = $_GET['check_in'];
     $check_out = $_GET['check_out'];
+
     $stmt->bind_param('i', $id);
     $stmt->execute();
+    
     $roomResults = $stmt->get_result();
     $room = $roomResults->fetch_assoc();
     $stmt->close();
