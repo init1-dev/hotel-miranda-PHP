@@ -95,38 +95,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const formData = $(this).serialize();
 
+            const toast = swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                showCloseButton: true,
+                timerProgressBar: true,
+                timer: 3000,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+
             $.ajax({
                 type: "POST",
                 url: "../utils/forms/contact-form.php",
                 data: formData,
                 success: function(response) {
                     console.log(response);
-                    swal.fire({
-                        position: "top-end",
+                    toast.fire({
                         icon: "success",
-                        toast: true,
-                        timer: 2500,
-                        timerProgressBar: true,
-                        title: "Form submitted successfully",
-                        showConfirmButton: false
+                        title: "Form submitted successfully"
                     });
                     document.getElementById('contact-form').reset();
                 },
-                error: function(xhr, status, error) {
-                    console.error(status, xhr);
-                    swal.fire({
-                        position: "top-end",
+                error: function(xhr, status, _error) {
+                    console.error(status, xhr.statusText);
+                    toast.fire({
                         icon: "error",
-                        toast: true,
-                        timer: 2500,
-                        timerProgressBar: true,
-                        title: `Error ${xhr.status}: ${error}`,
-                        showConfirmButton: false
+                        title: `Error ${xhr.status}: ${xhr.responseText}`,
                     });
                 }
             });
-
-            
             
         });
 

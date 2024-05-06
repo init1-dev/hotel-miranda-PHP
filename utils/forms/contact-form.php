@@ -1,36 +1,30 @@
 <?php
     require_once __DIR__ . '/../connection.php';
     require_once __DIR__ . '/../executeQueryWithParams.php';
+    require_once __DIR__ . '/../forms/inputsCheck.php';
 
-    $fullname = isset($_POST['fullname']) 
-        ? htmlspecialchars($_POST['fullname']) 
-        : null;
-    $phone = isset($_POST['phone']) 
-        ? htmlspecialchars($_POST['phone']) 
-        : null;
-    $email = isset($_POST['email']) 
-        ? htmlspecialchars($_POST['email']) 
-        : null;
-    $subject = isset($_POST['subject']) 
-        ? htmlspecialchars($_POST['subject']) 
-        : null;
-    $message = isset($_POST['message']) 
-        ? htmlspecialchars($_POST['message']) 
-        : null;
-    $rating = isset($_POST['rating'])
-        ? htmlspecialchars($_POST['rating']) 
-        : null;
+    $values = [];
+    foreach ($_POST as $key => $value) {
+        $values[] = htmlspecialchars($value);
+    };
 
-    $query = "INSERT INTO message (full_name, email, phone, subject, message, stars) VALUES (?, ?, ?, ?, ?, ?);";
+    $isAnyNull = array_some($values, '');
 
-    try {
-        executeQueryWithParams($connection, $query, 'sssssi', [
-            $fullname, $phone, $email, $subject, $message, $rating
-        ]);
-
-        $connection->close();
-        
-    } catch (PDOException $e) {
+    if($isAnyNull){
+        http_response_code(400);
+        echo "Bad Request";
         exit;
+    } else {
+        $query = "INSERT INTO message (full_name, phone, email, subject, stars, message) VALUES (?, ?, ?, ?, ?, ?);";
+
+        try {
+            print_r($values);
+            executeQueryWithParams($connection, $query, 'ssssis', $values);
+
+            $connection->close();
+            
+        } catch (PDOException $e) {
+            exit;
+        }
     }
 ?>

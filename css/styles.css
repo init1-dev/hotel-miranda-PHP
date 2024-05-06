@@ -2667,6 +2667,9 @@
 .contact form button:hover {
   filter: hue-rotate(45deg);
 }
+.contact form button:focus, .contact form button:focus-visible, .contact form button:active {
+  outline: none;
+}
 
 #rooms-swiper, #rooms-swiper-normal {
   width: 100%;
