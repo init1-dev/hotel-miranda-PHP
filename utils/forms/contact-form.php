@@ -27,21 +27,10 @@
         executeQueryWithParams($connection, $query, 'sssssi', [
             $fullname, $phone, $email, $subject, $message, $rating
         ]);
+
+        $connection->close();
         
     } catch (PDOException $e) {
         exit;
     }
-
-    $connection->close();
-
-    echo $fullname;
-    echo "<br>";
-    echo $phone;
-    echo "<br>";
-    echo $email;
-    echo "<br>";
-    echo $subject;
-    echo "<br>";
-    echo $message;
-
 ?>
