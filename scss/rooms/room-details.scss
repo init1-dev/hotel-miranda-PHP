@@ -72,6 +72,10 @@
                         padding: 1rem 1rem 1rem 1rem;
                         border: unset;
                         background-position: 90%;
+                        
+                        &:hover {
+                            cursor: text;
+                        }
                     }
 
                     .no-bg {

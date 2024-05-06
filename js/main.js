@@ -81,9 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
             swal.fire({
                 position: "top-end",
                 icon: "success",
+                toast: true,
+                timer: 2500,
+                timerProgressBar: true,
                 title: "Booking ordered successfully",
-                showConfirmButton: false,
-                timer: 1500
+                showConfirmButton: false
             })
             document.getElementById('booking-form').reset();
         });
@@ -93,24 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
             swal.fire({
                 position: "top-end",
                 icon: "success",
+                toast: true,
+                timer: 2500,
+                timerProgressBar: true,
                 title: "Form submitted successfully",
-                showConfirmButton: false,
-                timer: 1500
+                showConfirmButton: false
             })
             document.getElementById('contact-form').reset();
         });
-
-        
-
-        // $('#').on("submit", function(event){
-        //     swal({
-        //         position: "top-end",
-        //         type: "success",
-        //         title: "Your work has been saved",
-        //         showConfirmButton: false,
-        //         timer: 1500
-        //     })
-        // });
 
     });
 });
