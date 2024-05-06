@@ -1,5 +1,28 @@
 let hovered = false;
 
+const ajaxForm = (type, url, data, title, formElement, toast) => {
+    $.ajax({
+        type: type,
+        url: url,
+        data: data,
+        success: function(_response){
+            toast.fire({
+                icon: "success",
+                title: title
+            });
+            $(formElement)[0].reset();
+            console.log(_response);
+        },
+        error: function(xhr, status, _error){
+            console.error(status, xhr.statusText);
+            toast.fire({
+                icon: "error",
+                title: `Error ${xhr.status}: ${xhr.responseText}`,
+            });
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("header__menu-toggle");
     const menu = document.querySelector(".header__nav--list");
@@ -48,6 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
     $(document).ready(function() {
         let lastScrollTop = 0;
         let navbarHeight = $('.header').outerHeight();
+
+        const toast = swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            showCloseButton: true,
+            timerProgressBar: true,
+            timer: 3000,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
+        });
     
         $(window).scroll(function() {
             if($(window).width() > 1000) {
@@ -78,57 +114,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $( ".booking-form" ).on( "submit", function( event ) {
             event.preventDefault();
-            swal.fire({
-                position: "top-end",
-                icon: "success",
-                toast: true,
-                timer: 2500,
-                timerProgressBar: true,
-                title: "Booking ordered successfully",
-                showConfirmButton: false
-            })
-            document.getElementById('booking-form').reset();
+            const formData = $(this).serialize();
+
+            ajaxForm(
+                "POST",
+                "../utils/forms/booking-form.php",
+                formData,
+                "Booking ordered successfully",
+                '.booking-form',
+                toast
+            );
         });
 
         $( "#contact-form" ).on( "submit", function( event ) {
             event.preventDefault();
-
             const formData = $(this).serialize();
 
-            const toast = swal.mixin({
-                toast: true,
-                position: "top-end",
-                showConfirmButton: false,
-                showCloseButton: true,
-                timerProgressBar: true,
-                timer: 3000,
-                didOpen: (toast) => {
-                    toast.onmouseenter = Swal.stopTimer;
-                    toast.onmouseleave = Swal.resumeTimer;
-                }
-            });
-
-            $.ajax({
-                type: "POST",
-                url: "../utils/forms/contact-form.php",
-                data: formData,
-                success: function(response) {
-                    console.log(response);
-                    toast.fire({
-                        icon: "success",
-                        title: "Form submitted successfully"
-                    });
-                    document.getElementById('contact-form').reset();
-                },
-                error: function(xhr, status, _error) {
-                    console.error(status, xhr.statusText);
-                    toast.fire({
-                        icon: "error",
-                        title: `Error ${xhr.status}: ${xhr.responseText}`,
-                    });
-                }
-            });
-            
+            ajaxForm(
+                "POST", 
+                "../utils/forms/contact-form.php", 
+                formData, 
+                "Form submitted successfully", 
+                '#contact-form',
+                toast
+            );
         });
 
     });

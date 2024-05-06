@@ -21,6 +21,7 @@
     $formatedRelated = formRoomData($relatedRooms);
 
     $values = [
+        'id' => $id,
         'room' => $formatedRoom,
         'related' => $formatedRelated,
         'check_in' => $check_in,

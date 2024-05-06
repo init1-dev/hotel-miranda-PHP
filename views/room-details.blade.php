@@ -45,28 +45,29 @@
                         <h4>Check Availability</h4>
                         <div class="input--container">
                             <label for="arrival" class="input--text">Check In</label>
-                            <input class="input" type="date" name="arrival" id="arrival" onfocus="this.showPicker()" value={{$check_in ? $check_in : '2025-06-23'}}>
+                            <input class="input" type="date" name="arrival" id="arrival" onfocus="this.showPicker()" value={{$check_in ? $check_in : '2025-06-23'}} required>
                         </div>
                         <div class="input--container">
                             <label for="departure" class="input--text">Check Out</label>
-                            <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()" value={{$check_out ? $check_out : '2025-06-25'}}>
+                            <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()" value={{$check_out ? $check_out : '2025-06-25'}} required>
                         </div>
                         <div class="input--container">
                             <label for="fullname" class="input--text">Fullname</label>
-                            <input class="input no-bg" type="text" name="fullname" id="fullname" value="in1t">
+                            <input class="input no-bg" type="text" name="fullname" id="fullname" value="in1t" required>
                         </div>
                         <div class="input--container">
                             <label for="phone" class="input--text">Phone</label>
-                            <input class="input no-bg" type="text" name="phone" id="phone" value="600123456">
+                            <input class="input no-bg" type="text" name="phone" id="phone" value="600123456" required>
                         </div>
                         <div class="input--container">
                             <label for="email" class="input--text">Email</label>
-                            <input class="input no-bg" type="text" name="email" id="email" value="email@correo.com">
+                            <input class="input no-bg" type="text" name="email" id="email" value="email@correo.com" required>
                         </div>
                         <div class="input--container">
                             <label for="special-request" class="input--text">Epecial request</label>
-                            <textarea class="input no-bg" name="special-request" id="special-request">Necesito una tonelada de pizza, por favor</textarea>
+                            <textarea class="input no-bg" name="special-request" id="special-request" required>Necesito una tonelada de pizza, por favor</textarea>
                         </div>
+                        <input type="number" name="id" id="id" hidden value={{$id}}>
                         <a>
                             <button class="submit" type="submit">
                                 {{ $check_in && $check_out ? 'BOOK NOW' : 'CHECK AVAILABILITY' }}

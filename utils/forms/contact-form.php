@@ -18,7 +18,7 @@
         $query = "INSERT INTO message (full_name, phone, email, subject, stars, message) VALUES (?, ?, ?, ?, ?, ?);";
 
         try {
-            print_r($values);
+            // print_r($values);
             executeQueryWithParams($connection, $query, 'ssssis', $values);
 
             $connection->close();

@@ -1,34 +1,31 @@
 <?php
+    require_once __DIR__ . '/../connection.php';
+    require_once __DIR__ . '/../executeQueryWithParams.php';
+    require_once __DIR__ . '/../forms/inputsCheck.php';
 
-    $arrival = isset($_POST['arrival']) 
-        ? $_POST['arrival'] 
-        : null;
-    $departure = isset($_POST['departure']) 
-        ? $_POST['departure'] 
-        : null;
-    $fullname = isset($_POST['fullname']) 
-        ? $_POST['fullname'] 
-        : null;
-    $phone = isset($_POST['phone']) 
-        ? $_POST['phone'] 
-        : null;
-    $email = isset($_POST['email']) 
-        ? $_POST['email'] 
-        : null;
-    $specialRequest = isset($_POST['special-request']) 
-        ? $_POST['special-request'] 
-        : null;
+    $values = [];
+    foreach ($_POST as $key => $value) {
+        $values[] = htmlspecialchars($value);
+    }
 
-    echo $arrival;
-    echo "<br>";
-    echo $departure;
-    echo "<br>";
-    echo $fullname;
-    echo "<br>";
-    echo $phone;
-    echo "<br>";
-    echo $email;
-    echo "<br>";
-    echo $specialRequest;
+    $isAnyNull = array_some($values, '');
+
+    if($isAnyNull){
+        http_response_code(400);
+        echo "Bad request";
+        exit;
+    } else {
+        $query = "INSERT INTO booking (check_in, check_out, full_name, phone, email, special_request, room_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        try {
+            // print_r($values);
+            executeQueryWithParams($connection, $query, 'ssssssi', $values);
+
+            $connection->close();
+            
+        } catch (PDOException $e) {
+            exit;
+        }
+    }
 
 ?>
