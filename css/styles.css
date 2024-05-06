@@ -1601,9 +1601,15 @@
   padding: 1rem 1rem 1rem 1rem;
   border: unset;
   background-position: 90%;
+  border: 1px solid transparent;
 }
 .room-details .main__form #check-availability-form .input--container .input:hover {
   cursor: text;
+}
+.room-details .main__form #check-availability-form .input--container .input:focus, .room-details .main__form #check-availability-form .input--container .input:focus-visible, .room-details .main__form #check-availability-form .input--container .input:active {
+  outline: none;
+  border: 1px solid #BEAD8E;
+  box-shadow: 2px 2px 5px -3px black;
 }
 .room-details .main__form #check-availability-form .input--container .no-bg {
   background-image: unset;
@@ -2506,7 +2512,7 @@
   padding: 1rem 1rem;
   padding-left: 3rem;
   background-color: #F8F8F8;
-  border: none;
+  border: 1px solid transparent;
   margin-bottom: 1rem;
   font-family: Roboto;
   font-size: 14px;
@@ -2514,6 +2520,16 @@
   line-height: 19px;
   letter-spacing: 0px;
   width: 100%;
+  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.contact form .input-text:hover {
+  background-color: #f0f0f0;
+}
+.contact form .input-text:focus, .contact form .input-text:focus-visible, .contact form .input-text:active {
+  outline: none;
+  border: 1px solid #BEAD8E;
+  box-shadow: 2px 2px 5px -3px black;
 }
 .contact form .groups {
   display: flex;
@@ -2542,6 +2558,65 @@
   color: #BEAD8E;
   position: absolute;
 }
+.contact form .rating-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact form .rating {
+  --dir: right;
+  --fill: gold;
+  --fillbg: rgba(100, 100, 100, 0.15);
+  --star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
+  --stars: 5;
+  --starsize: 3rem;
+  --symbol: var(--star);
+  --value: 5;
+  --w: calc(var(--stars) * var(--starsize));
+  --x: calc(100% * (var(--value) / var(--stars)));
+  block-size: var(--starsize);
+  inline-size: var(--w);
+  position: relative;
+  touch-action: manipulation;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: transform 0.3s ease;
+}
+.contact form .rating:hover {
+  transform: scale(1.1);
+}
+.contact form [dir=rtl] .rating {
+  --dir: left;
+}
+.contact form .rating::-moz-range-track {
+  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+}
+.contact form .rating::-webkit-slider-runnable-track {
+  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+  -webkit-mask: repeat left center/var(--starsize) var(--symbol);
+}
+.contact form .rating::-moz-range-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+}
+.contact form .rating::-webkit-slider-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+  -webkit-appearance: none;
+}
+.contact form .rating, .contact form .rating-label {
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.contact form .rating-label {
+  margin-block-end: 1rem;
+}
 .contact form .message {
   width: 100%;
   position: relative;
@@ -2556,14 +2631,24 @@
   width: 100%;
   margin-bottom: 1rem;
   background-color: #F8F8F8;
-  border: unset;
-  padding: 1.5rem 1rem 1rem 1rem;
+  border: 1px solid transparent;
+  padding: 1.3rem 1rem 1rem 1rem;
   padding-left: 3rem;
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0px;
+  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.contact form .text-area:hover {
+  background-color: #f0f0f0;
+}
+.contact form .text-area:focus, .contact form .text-area:focus-visible, .contact form .text-area:active {
+  outline: none;
+  border: 1px solid #BEAD8E;
+  box-shadow: 2px 2px 5px -3px black;
 }
 .contact form button {
   font-family: Roboto;
@@ -2578,6 +2663,9 @@
   width: 100%;
   cursor: pointer;
   margin-bottom: 5rem;
+}
+.contact form button:hover {
+  filter: hue-rotate(45deg);
 }
 
 #rooms-swiper, #rooms-swiper-normal {

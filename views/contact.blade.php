@@ -60,40 +60,46 @@
                 <div class="group1">
                     <div class="name">
                         <i class="fa-solid fa-user"></i>
-                        <input class="input-text" type="text" name="fullname" id="fullname" placeholder="Your full name" required value="In1t">
+                        <input class="input-text" type="text" name="fullname" id="fullname" placeholder="Your full name" required>
                     </div>
 
                     <div class="number">
                         <i class="fa-solid fa-phone"></i>
-                        <input class="input-text" type="text" name="phone" id="phone" placeholder="Add phone number" required value="600123456">
+                        <input class="input-text" type="text" name="phone" id="phone" placeholder="Add phone number" required>
                     </div>
                 </div>
 
                 <div class="group2">
                     <div class="email">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="input-text" type="text" name="email" id="email" placeholder="Enter email address" required value="email@email.com">
+                        <input class="input-text" type="text" name="email" id="email" placeholder="Enter email address" required>
                     </div>
 
                     <div class="subject">
                         <i class="fa-solid fa-file-lines"></i>
-                        <input class="input-text" type="text" name="subject" id="subject" placeholder="Enter subject" required value="test message">
+                        <input class="input-text" type="text" name="subject" id="subject" placeholder="Enter subject" required>
                     </div>
                 </div>
             </div>
 
-            <div class="groups">
-                <div class="group1">
-                    <div class="range">
-                        <label for="star">Rate:</label>
-                        <input class="input-text" type="range" name="stars" id="stars" min="1" max="5" step="1">
-                    </div>
-                </div>
+            <div class="rating-group">
+                <label class="rating-label">
+                    <input
+                        class="rating"
+                        min="1"
+                        max="5"
+                        oninput="this.style.setProperty('--value', this.value)"
+                        step="1"
+                        type="range"
+                        name="rating"
+                        id="rating"
+                        value="5">
+                </label>
             </div>
 
             <div class="message">
                 <i class="fa-solid fa-pencil"></i>
-                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Enter message" required>this is a lorem ipsum test message for testing</textarea>
+                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
             </div>
 
             <button type="submit">SEND</button>

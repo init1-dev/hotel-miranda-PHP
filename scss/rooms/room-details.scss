@@ -72,9 +72,16 @@
                         padding: 1rem 1rem 1rem 1rem;
                         border: unset;
                         background-position: 90%;
+                        border: 1px solid transparent;
                         
                         &:hover {
                             cursor: text;
+                        }
+
+                        &:focus, &:focus-visible, &:active {
+                            outline: none;
+                            border: 1px solid #BEAD8E;
+                            box-shadow: 2px 2px 5px -3px black;
                         }
                     }
 

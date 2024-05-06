@@ -17,12 +17,15 @@
     $message = isset($_POST['message']) 
         ? htmlspecialchars($_POST['message']) 
         : null;
+    $rating = isset($_POST['rating'])
+        ? htmlspecialchars($_POST['rating']) 
+        : null;
 
     $query = "INSERT INTO message (full_name, email, phone, subject, message, stars) VALUES (?, ?, ?, ?, ?, ?);";
 
     try {
         executeQueryWithParams($connection, $query, 'sssssi', [
-            $fullname, $phone, $email, $subject, $message, 5
+            $fullname, $phone, $email, $subject, $message, $rating
         ]);
         
     } catch (PDOException $e) {
