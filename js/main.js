@@ -92,16 +92,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $( "#contact-form" ).on( "submit", function( event ) {
             event.preventDefault();
-            swal.fire({
-                position: "top-end",
-                icon: "success",
-                toast: true,
-                timer: 2500,
-                timerProgressBar: true,
-                title: "Form submitted successfully",
-                showConfirmButton: false
-            })
-            document.getElementById('contact-form').reset();
+
+            const formData = $(this).serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "../utils/forms/contact-form.php",
+                data: formData,
+                success: function(response) {
+                    console.log(response);
+                    swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        toast: true,
+                        timer: 2500,
+                        timerProgressBar: true,
+                        title: "Form submitted successfully",
+                        showConfirmButton: false
+                    });
+                    document.getElementById('contact-form').reset();
+                },
+                error: function(xhr, status, error) {
+                    console.error(status, xhr);
+                    swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        toast: true,
+                        timer: 2500,
+                        timerProgressBar: true,
+                        title: `Error ${xhr.status}: ${error}`,
+                        showConfirmButton: false
+                    });
+                }
+            });
+
+            
+            
         });
 
     });

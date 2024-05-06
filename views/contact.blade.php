@@ -55,7 +55,7 @@
 
         <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg" alt="">
 
-        <form  id="contact-form" action="../utils/forms/contact-form.php" method="POST">
+        <form id="contact-form" method="POST">
             <div class="groups">
                 <div class="group1">
                     <div class="name">
@@ -78,6 +78,15 @@
                     <div class="subject">
                         <i class="fa-solid fa-file-lines"></i>
                         <input class="input-text" type="text" name="subject" id="subject" placeholder="Enter subject" required value="test message">
+                    </div>
+                </div>
+            </div>
+
+            <div class="groups">
+                <div class="group1">
+                    <div class="range">
+                        <label for="star">Rate:</label>
+                        <input class="input-text" type="range" name="stars" id="stars" min="1" max="5" step="1">
                     </div>
                 </div>
             </div>
