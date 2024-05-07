@@ -12,14 +12,23 @@
 
     if($isAnyNull){
         http_response_code(400);
-        echo "Bad Request";
+
+        echo json_encode(array(
+            "success" => false, 
+            "message" => "Bad request"
+        ));
+        
         exit;
     } else {
         $query = "INSERT INTO message (full_name, phone, email, subject, stars, message) VALUES (?, ?, ?, ?, ?, ?);";
 
         try {
-            // print_r($values);
             executeQueryWithParams($connection, $query, 'ssssis', $values);
+
+            echo json_encode(array(
+                "success" => true, 
+                "message" => "Form submitted successfully"
+            ));
 
             $connection->close();
             

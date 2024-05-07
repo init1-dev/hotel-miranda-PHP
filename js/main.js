@@ -5,19 +5,22 @@ const ajaxForm = (type, url, data, title, formElement, toast) => {
         type: type,
         url: url,
         data: data,
-        success: function(_response){
-            toast.fire({
-                icon: "success",
-                title: title
-            });
-            $(formElement)[0].reset();
-            console.log(_response);
+        dataType: "json",
+        success: function(response){
+            if(response.success){
+                toast.fire({
+                    icon: "success",
+                    title: response.message
+                });
+                $(formElement)[0].reset();
+            }
         },
         error: function(xhr, status, _error){
-            console.error(status, xhr.statusText);
+            console.error(status, xhr.responseJSON.message);
+            console.log("xhr: ", xhr);
             toast.fire({
                 icon: "error",
-                title: `Error ${xhr.status}: ${xhr.responseText}`,
+                title: `Error ${xhr.status}: ${xhr.responseJSON.message}`,
             });
         }
     });

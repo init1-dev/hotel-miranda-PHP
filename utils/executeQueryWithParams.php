@@ -12,9 +12,6 @@
                 while ($row = $results->fetch_assoc()){
                     $data[] = $row;
                 }
-            } else {
-                echo "No results";
-                exit;
             }
         } else{
             echo "Error running query: " . $connection->error;

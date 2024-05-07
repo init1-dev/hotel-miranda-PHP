@@ -1618,6 +1618,9 @@
   margin-left: unset;
   width: 100%;
 }
+.room-details .main__form #check-availability-form .submit:hover {
+  filter: hue-rotate(45deg);
+}
 @media (min-width: 1000px) {
   .room-details .main__form #check-availability-form .submit {
     width: 17rem;

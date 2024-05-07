@@ -94,6 +94,10 @@
                     margin-left: unset;
                     width: 100%;
 
+                    &:hover{
+                        filter: hue-rotate(45deg);
+                    }
+
                     @media (min-width: 1000px) {
                         width: 17rem;
                     }
