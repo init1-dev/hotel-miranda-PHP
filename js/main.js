@@ -1,6 +1,6 @@
 let hovered = false;
 
-const ajaxForm = (type, url, data, title, formElement, toast) => {
+const ajaxForm = async (type, url, data, _title, formElement, toast, callback) => {
     $.ajax({
         type: type,
         url: url,
@@ -13,15 +13,16 @@ const ajaxForm = (type, url, data, title, formElement, toast) => {
                     title: response.message
                 });
                 $(formElement)[0].reset();
+                callback("success");
             }
         },
         error: function(xhr, status, _error){
             console.error(status, xhr.responseJSON.message);
-            console.log("xhr: ", xhr);
             toast.fire({
                 icon: "error",
-                title: `Error ${xhr.status}: ${xhr.responseJSON.message}`,
+                title: `Error: ${xhr.responseJSON.message}`,
             });
+            callback(xhr.responseJSON.message);
         }
     });
 }
@@ -115,17 +116,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        $( ".booking-form" ).on( "submit", function( event ) {
+        $( ".booking-form" ).on( "submit", async function( event ) {
             event.preventDefault();
             const formData = $(this).serialize();
 
-            ajaxForm(
+            await ajaxForm(
                 "POST",
                 "../utils/forms/booking-form.php",
                 formData,
                 "Booking ordered successfully",
                 '.booking-form',
-                toast
+                toast,
+                function(errorMessage){
+                    if(errorMessage === 'success'){
+                        $("#arrival").css("border-color", "green");
+                        $("#departure").css("border-color", "green");
+                    } else {
+                        $("#arrival").css("border-color", "red");
+                        $("#departure").css("border-color", "red");
+                    }
+                }
             );
         });
 
