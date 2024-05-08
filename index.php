@@ -17,4 +17,17 @@
     ];
 
     renderTemplate('index', $values);
+
+    if (isset($_GET['booking']) && $_GET['booking'] === 'success') {
+        echo '
+            <script defer>
+                swal.fire({
+                    icon: "success",
+                    title: "Booking ordered successfully",
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+            </script>
+        ';
+    }
 ?>

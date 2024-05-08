@@ -76,7 +76,7 @@
                 </div>
             </section>
             <section class="about-us__features">
-                <img class="about-us__features-img" src="./assets/employees.png" alt="">
+                <img class="about-us__features-img" src="https://media.licdn.com/dms/image/D4E12AQFsx3AH8m2GGg/article-cover_image-shrink_600_2000/0/1706876622899?e=2147483647&v=beta&t=tvUFLtHejh8EgIpxHnNMIOxPRL92gM3EyBcwv_YLa24" alt="">
                 <div class="about-us__features-feature">
                     <img class="about-us__features-feature-img" src="./assets/team.png" alt="personas">
                     <img class="bg-img" src="./assets/teambg.png" alt="">
@@ -84,7 +84,7 @@
                     <p class="about-us__features-feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                         sed do eiusmod tempor.</p>
                 </div>
-                <img class="about-us__features-img luxury" src="./assets/room-images/luxuryroom.png" alt="">
+                <img class="about-us__features-img luxury" src="https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg" alt="">
                 <div class="about-us__features-feature about-us__features-feature--dark">
                     <img class="about-us__features-feature-img" src="./assets/luxury.png" alt="calendario">
                     <p class="about-us__features-feature-title about-us__features-feature-title--dark">Luxury Room</p>
@@ -145,10 +145,7 @@
             </a>
         </div>
         <div class="video-container">
-            <video id="luxuryVideo" class="luxuryPlace__video" controls>
-                <source src="./assets/video/Explore Palm Desert and stay at Hotel Paseo.mp4" type="video/mp4">
-            </video>
-            <div class="play-button"></div>
+            <iframe class="luxuryPlace__video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/DlN18b-J-to?si=S4RUmwHaszItENuG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
     <section id="coreFeatures" class="coreFeatures">
@@ -251,7 +248,7 @@
                 <div class="swiper-slide">
                     <div class="menu-swipper--content">
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/comida1.png" alt="">
+                            <img class="img" src="https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D" alt="">
                             <div>
                                 <p class="swipper--title">Eggs & Bacon</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -262,7 +259,7 @@
                         </div>
 
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/comida2.png" alt="">
+                            <img class="img" src="https://media.istockphoto.com/id/1625128632/photo/most-common-allergy-food-shot-from-above.jpg?b=1&s=612x612&w=0&k=20&c=jy8uEBErKnHmnunQ3xe-vetl65EGf__ZKOOs_bjCAaY=" alt="">
                             <div>
                                 <p class="swipper--title">Tea or Coffee</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -273,7 +270,7 @@
                         </div>
 
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/comida3.png" alt="">
+                            <img class="img" src="https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?b=1&s=612x612&w=0&k=20&c=V8oaDpP3mx6rUpRfrt2L9mZCD0_ySlnI7cd4nkgGAb8=" alt="">
                             <div>
                                 <p class="swipper--title">Chia Oatmeal</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -288,7 +285,7 @@
                 <div class="swiper-slide">
                     <div class="menu-swipper--content">
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/fruit1.png" alt="">
+                            <img class="img" src="https://imageio.forbes.com/specials-images/imageserve/65072bc1a50c29d7592250c0/Healthy-food--Healthy-eating-background--Fruit--vegetable--berry---Vegetarian-eating-/960x0.jpg?format=jpg&width=960" alt="">
                             <div>
                                 <p class="swipper--title">Fruit Parfait</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -299,9 +296,9 @@
                         </div>
 
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/fruit2.png" alt="">
+                            <img class="img" src="https://www.bannerhealth.com/healthcareblog/-/media/images/project/healthcareblog/hero-images/2021/10/real-food-and-key-to-health.ashx" alt="">
                             <div>
-                                <p class="swipper--title">Marmalade Selection</p>
+                                <p class="swipper--title">Marmalade</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
                             </div>
                             <div class="swiper--item__arrow">
@@ -310,7 +307,7 @@
                         </div>
 
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/fruit3.png" alt="">
+                            <img class="img" src="https://www.mowglistreetfood.com/wp-content/uploads/2023/01/Landing_image_Desktop.jpg" alt="">
                             <div>
                                 <p class="swipper--title">Cheese Plate</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -325,7 +322,7 @@
                 <div class="swiper-slide">
                     <div class="menu-swipper--content">
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/comida1.png" alt="">
+                            <img class="img" src="https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D" alt="">
                             <div>
                                 <p class="swipper--title">Eggs & Bacon</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -336,7 +333,7 @@
                         </div>
 
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/comida2.png" alt="">
+                            <img class="img" src="https://media.istockphoto.com/id/1625128632/photo/most-common-allergy-food-shot-from-above.jpg?b=1&s=612x612&w=0&k=20&c=jy8uEBErKnHmnunQ3xe-vetl65EGf__ZKOOs_bjCAaY=" alt="">
                             <div>
                                 <p class="swipper--title">Tea or Coffee</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -347,7 +344,7 @@
                         </div>
 
                         <div class="swiper--item">
-                            <img class="img" src="./assets/food/comida3.png" alt="">
+                            <img class="img" src="https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?b=1&s=612x612&w=0&k=20&c=V8oaDpP3mx6rUpRfrt2L9mZCD0_ySlnI7cd4nkgGAb8=" alt="">
                             <div>
                                 <p class="swipper--title">Chia Oatmeal</p>
                                 <p class="swipper--subtitle">Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
@@ -367,22 +364,22 @@
         <div id="images-swipper" class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="./assets/food/comida1.png" alt="">
+                    <img src="https://www.eatright.org/-/media/images/eatright-landing-pages/foodgroupslp_804x482.jpg?as=0&w=967&rev=d0d1ce321d944bbe82024fff81c938e7&hash=E6474C8EFC5BE5F0DA9C32D4A797D10D" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/food/comida2.png" alt="">
+                    <img src="https://media.istockphoto.com/id/1625128632/photo/most-common-allergy-food-shot-from-above.jpg?b=1&s=612x612&w=0&k=20&c=jy8uEBErKnHmnunQ3xe-vetl65EGf__ZKOOs_bjCAaY=" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/food/comida3.png" alt="">
+                    <img src="https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?b=1&s=612x612&w=0&k=20&c=V8oaDpP3mx6rUpRfrt2L9mZCD0_ySlnI7cd4nkgGAb8=" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/food/fruit1.png" alt="">
+                    <img src="https://imageio.forbes.com/specials-images/imageserve/65072bc1a50c29d7592250c0/Healthy-food--Healthy-eating-background--Fruit--vegetable--berry---Vegetarian-eating-/960x0.jpg?format=jpg&width=960" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/food/fruit2.png" alt="">
+                    <img src="https://www.bannerhealth.com/healthcareblog/-/media/images/project/healthcareblog/hero-images/2021/10/real-food-and-key-to-health.ashx" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/food/fruit3.png" alt="">
+                    <img src="https://www.mowglistreetfood.com/wp-content/uploads/2023/01/Landing_image_Desktop.jpg" alt="">
                 </div>
             </div>
             <div class="swiper-pagination"></div>

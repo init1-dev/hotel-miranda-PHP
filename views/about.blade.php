@@ -23,10 +23,7 @@
         </div>
 
         <div class="video-container">
-            <video id="luxuryVideo" class="luxuryPlace__video" controls>
-                <source src="./assets/video/Explore Palm Desert and stay at Hotel Paseo.mp4" type="video/mp4">
-            </video>
-            <div class="play-button"></div>
+            <iframe class="luxuryPlace__video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/DlN18b-J-to?si=S4RUmwHaszItENuG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div class="text__container">
@@ -63,7 +60,7 @@
         </div>
 
         <div class="restaurant">
-            <img class="restaurant__img" src="./assets/food/comida2.png" alt="">
+            <img class="restaurant__img" src="https://t3.ftcdn.net/jpg/02/60/12/88/360_F_260128861_Q2ttKHoVw2VrmvItxyCVBnEyM1852MoJ.jpg" alt="">
             <div class="restaurant__content">
                 <small>RESTAURANT</small>
                 <h3>Get Restaurant Facilities & Many Other More</h3>
@@ -206,7 +203,7 @@
                         <div class="swiper-slide">
                             <div class="coreFeatures-swipper--content">
                                 <div class="swiper--item">
-                                    <img src="./assets/room-images/luxuryroom.png" alt="">
+                                    <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -214,7 +211,31 @@
                         <div class="swiper-slide">
                             <div class="coreFeatures-swipper--content">
                                 <div class="swiper--item">
-                                    <img src="./assets/room-images/luxuryroom.png" alt="">
+                                    <img src="https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="coreFeatures-swipper--content">
+                                <div class="swiper--item">
+                                    <img src="https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="coreFeatures-swipper--content">
+                                <div class="swiper--item">
+                                    <img src="https://www.cvent.com/sites/default/files/image/2021-10/hotel%20room%20with%20beachfront%20view.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="coreFeatures-swipper--content">
+                                <div class="swiper--item">
+                                    <img src="https://t3.ftcdn.net/jpg/06/19/00/08/360_F_619000872_AxiwLsfQqRHMkNxAbN4l5wg1MsPgBsmo.jpg" alt="">
                                 </div>
                             </div>
                         </div>

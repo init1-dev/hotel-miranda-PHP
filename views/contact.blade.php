@@ -53,31 +53,35 @@
             </div>
         </div>
 
-        <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/02/google-maps-2961754.jpg" alt="">
+        <div class="map">
+            <div style="width: 100%"><iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=es&amp;q=8818%20Greenview%20Ln%20Greendale%20Wisconsin(WI),%2053129+(Hotel%20Miranda)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car Navigation Systems</a></iframe></div>
+        </div>
+
+        <h2 class="msg-text">Leave us a message:</h2>
 
         <form id="contact-form" method="POST">
             <div class="groups">
                 <div class="group1">
                     <div class="name">
                         <i class="fa-solid fa-user"></i>
-                        <input class="input-text" type="text" name="fullname" id="fullname" placeholder="Your full name" value="in1t" required>
+                        <input class="input-text" type="text" name="fullname" id="fullname" placeholder="Your full name" required>
                     </div>
 
                     <div class="number">
                         <i class="fa-solid fa-phone"></i>
-                        <input class="input-text" type="text" name="phone" id="phone" placeholder="Add phone number" value="600010203" required>
+                        <input class="input-text" type="text" name="phone" id="phone" placeholder="Add phone number" required>
                     </div>
                 </div>
 
                 <div class="group2">
                     <div class="email">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="input-text" type="text" name="email" id="email" placeholder="Enter email address" value="email@sample.com" required>
+                        <input class="input-text" type="text" name="email" id="email" placeholder="Enter email address" required>
                     </div>
 
                     <div class="subject">
                         <i class="fa-solid fa-file-lines"></i>
-                        <input class="input-text" type="text" name="subject" id="subject" placeholder="Enter subject" value="test subject" required>
+                        <input class="input-text" type="text" name="subject" id="subject" placeholder="Enter subject" required>
                     </div>
                 </div>
             </div>
@@ -99,7 +103,7 @@
 
             <div class="message">
                 <i class="fa-solid fa-pencil"></i>
-                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Enter message" required>test message</textarea>
+                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
             </div>
 
             <button type="submit">SEND</button>

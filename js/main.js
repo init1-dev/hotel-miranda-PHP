@@ -1,63 +1,29 @@
 let hovered = false;
 
-const ajaxForm = async (type, url, data, _title, formElement, toast, callback) => {
-    $.ajax({
-        type: type,
-        url: url,
-        data: data,
-        dataType: "json",
-        success: function(response){
-            if(response.success){
-                toast.fire({
-                    icon: "success",
-                    title: response.message
-                });
-                $(formElement)[0].reset();
-                callback("success");
+const ajaxForm = (type, url, data) => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            type: type,
+            url: url,
+            data: data,
+            dataType: "json",
+            success: function(response){
+                if(response.success){
+                    resolve("success");
+                }
+            },
+            error: function(xhr, status, _error){
+                console.error(status, xhr.responseJSON.message);
+                reject(xhr.responseJSON.message);
             }
-        },
-        error: function(xhr, status, _error){
-            console.error(status, xhr.responseJSON.message);
-            toast.fire({
-                icon: "error",
-                title: `Error: ${xhr.responseJSON.message}`,
-            });
-            callback(xhr.responseJSON.message);
-        }
+        });
     });
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("header__menu-toggle");
     const menu = document.querySelector(".header__nav--list");
     const path = location.pathname;
-
-    let video = document.getElementById("luxuryVideo");
-    if(path === "/index.php" || path === "/about.php"){
-        video.controls = false;
-
-        $('.play-button').click(function() {
-            if (video.paused) {
-                video.play();
-            }
-        });
-
-        $('#luxuryVideo').click(function() {
-            if (video.paused) {
-                video.play();
-            }
-        });
-
-        video.addEventListener('play', function() {
-            video.controls = true;
-            $(".play-button").css("display", "none")
-        });
-
-        video.addEventListener('pause', function() {
-            video.controls = false;
-            $(".play-button").css("display", "block")
-        });
-    }
 
     menu.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", function() {
@@ -77,10 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let navbarHeight = $('.header').outerHeight();
 
         const toast = swal.mixin({
-            toast: true,
-            position: "top-end",
+            icon: "success",
+            position: "center",
             showConfirmButton: false,
-            showCloseButton: true,
             timerProgressBar: true,
             timer: 3000,
             didOpen: (toast) => {
@@ -116,27 +81,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        $( ".booking-form" ).on( "submit", async function( event ) {
+        $( ".booking-form" ).on( "submit", function( event ) {
             event.preventDefault();
             const formData = $(this).serialize();
 
-            await ajaxForm(
+            ajaxForm(
                 "POST",
                 "../utils/forms/booking-form.php",
-                formData,
-                "Booking ordered successfully",
-                '.booking-form',
-                toast,
-                function(errorMessage){
-                    if(errorMessage === 'success'){
-                        $("#arrival").css("border-color", "green");
-                        $("#departure").css("border-color", "green");
-                    } else {
-                        $("#arrival").css("border-color", "red");
-                        $("#departure").css("border-color", "red");
-                    }
-                }
-            );
+                formData
+            ).then((_result) => {
+                $("#arrival").css("border-color", "green");
+                $("#departure").css("border-color", "green");
+                window.location.href = "index.php?booking=success";
+            }).catch(error => {
+                $("#arrival").css("border-color", "red");
+                $("#departure").css("border-color", "red");
+                toast.fire({
+                    icon: "error",
+                    html: `<h3>${error}</h3>`
+                });
+            })
         });
 
         $( "#contact-form" ).on( "submit", function( event ) {
@@ -146,11 +110,18 @@ document.addEventListener("DOMContentLoaded", () => {
             ajaxForm(
                 "POST", 
                 "../utils/forms/contact-form.php", 
-                formData, 
-                "Form submitted successfully", 
-                '#contact-form',
-                toast
-            );
+                formData
+            ).then(_result => {
+                toast.fire({
+                    title: "Form submitted successfully"
+                });
+                $(this).reset;
+            }).catch(error => {
+                toast.fire({
+                    icon: "error",
+                    html: `<h3>${error}</h3>`
+                });
+            })
         });
 
     });

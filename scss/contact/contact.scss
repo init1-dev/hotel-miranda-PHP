@@ -3,6 +3,15 @@
     flex-direction: column;
     align-items: center;
 
+    .msg-text {
+        font-family: Old Standard TT;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: #222222;
+    }
+
     .contact__top-info {
         display: flex;
         flex-direction: column;
@@ -75,26 +84,37 @@
         }
     }
 
-    img {
+    .map {
         margin-top: 2rem;
+        margin-bottom: 3rem;
         width: 90%;
 
         @media (min-width: 1000px){
-            width: 45%;
             margin-top: unset;
+            width: 50%;
+        }
+
+        div {
+            
+            iframe {
+                height: 250px;
+
+                @media (min-width: 1000px){
+                    height: 350px;
+                }
+            }
         }
     }
 
     form {
         width: 90%;
-        margin-top: 1rem;
+        margin-top: 2rem;
         text-align: center;
         display: flex;
         flex-direction: column;
 
         @media (min-width: 1000px){
-            margin-top: 2rem;
-            width: 45%;
+            width: 50%;
         }
 
         .input-text {

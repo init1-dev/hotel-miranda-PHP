@@ -22,7 +22,7 @@
 
     $values = [
         'id' => $id,
-        'room' => $formatedRoom,
+        'room' => $formatedRoom[0],
         'related' => $formatedRelated,
         'check_in' => $check_in,
         'check_out' => $check_out

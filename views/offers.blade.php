@@ -111,7 +111,7 @@
                                         <p class="rooms__card__info__price--night">/Night</p>
                                     </div>
                                     <a style="all:unset;" href="room-details.php?id={{$room['id']}}">
-                                        <button class="rooms__card__info__price--button">Booking now</button>
+                                        <button class="rooms__card__info__price--button">Book now</button>
                                     </a>
                                 </div>
                             </div>

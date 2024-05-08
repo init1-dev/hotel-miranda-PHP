@@ -114,7 +114,7 @@ const aboutSwiper = new Swiper('#counter-swipper', {
     },
     breakpoints: {
         1000: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
             autoHeight: true,
         }

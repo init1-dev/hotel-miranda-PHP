@@ -55,7 +55,7 @@
                                             style="all:unset;" 
                                             href="room-details.php?id={{$room['id']}}&check_in={{$arrival}}&check_out={{$departure}}"
                                         >
-                                            <button class="rooms__card__info__price--button">Booking now</button>
+                                            <button class="rooms__card__info__price--button">Book now</button>
                                         </a>
                                     </div>
                                 </div>

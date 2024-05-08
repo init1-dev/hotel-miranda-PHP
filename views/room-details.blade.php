@@ -36,7 +36,7 @@
                         <small>/night</small>
                     </span>
                 </div>
-                <img src="assets/room-images/luxuryroom.png" alt="">
+                <img src={{ $room['photo'] }} alt="room image">
             </div>
 
             <main class="main">
@@ -139,7 +139,7 @@
                                 
                             </div>
                         </div>
-                        <img src="./assets/room-images/luxuryroom2.png" alt="Imagen 1">
+                        <img src={{ $room['photo'] }} alt="image photo">
                         <div class="slide-info">
                             <div class="description">
                                 <h2 class="limit-1">{{ $room['name'] . " " . $room['type'] }}</h2>
@@ -151,7 +151,7 @@
                                     <p class="rooms__card__info__price--night">/Night</p>
                                 </div>
                                 <a style="all:unset;" href="room-details.php?id={{$room['id']}}">
-                                        <button class="rooms__card__info__price--button">Booking now</button>
+                                        <button class="rooms__card__info__price--button">Book now</button>
                                 </a>
                             </div>
                         </div>

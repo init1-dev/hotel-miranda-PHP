@@ -19,11 +19,8 @@
                 : round($room['price'] / 100)
             ];
         }
-        if(count($formatedRooms) > 1){
-            return $formatedRooms;
-        } else {
-            return $formatedRooms[0];
-        }
+
+        return $formatedRooms;
     }
 
 ?>

@@ -385,7 +385,7 @@
     padding: 2rem 8% 5rem 8%;
     flex-direction: row;
     background-color: unset;
-    background: linear-gradient(to right, #222222 67%, #AD9D82 33%);
+    background: linear-gradient(to right, #222222 62%, #AD9D82 38%);
   }
 }
 @media (min-width: 1350px) {
@@ -434,6 +434,12 @@
 }
 .luxuryPlace .video-container {
   position: relative;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .luxuryPlace .video-container {
+    width: unset;
+  }
 }
 .luxuryPlace .video-container .luxuryPlace__video {
   display: flex;
@@ -635,6 +641,8 @@
 }
 .ourFoods #menu-swipper .menu-swipper--content .swiper--item .img {
   margin-right: 1.2rem;
+  min-height: 100px;
+  aspect-ratio: 1/1;
 }
 .ourFoods #menu-swipper .menu-swipper--content .swiper--item .arrow {
   position: absolute;
@@ -659,7 +667,7 @@
 .ourFoods #images-swipper {
   width: 100%;
   margin-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 .ourFoods #images-swipper:hover {
   cursor: pointer;
@@ -681,9 +689,10 @@
 .ourFoods #images-swipper .swiper-slide img {
   display: block;
   width: calc(100% - 40px);
-  height: auto;
   max-width: 100%;
-  max-height: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
 @media (min-width: 1000px) {
   .ourFoods #images-swipper .swiper-slide img {
@@ -1245,6 +1254,7 @@
   }
 }
 .about__section .counter .counter__swiper #counter-swipper img {
+  min-height: 200px;
   height: auto;
   width: 100%;
   object-fit: cover;
@@ -1300,7 +1310,7 @@
 }
 @media (min-width: 1000px) {
   .rooms--grid .rooms_grid .rooms__card img {
-    max-height: 300px;
+    height: 250px;
   }
 }
 @media (min-width: 1000px) {
@@ -1443,6 +1453,7 @@
 @media (min-width: 1000px) {
   .rooms--list .rooms_grid .rooms__card img {
     max-width: 350px;
+    height: 240px;
   }
 }
 @media (min-width: 1000px) {
@@ -2424,6 +2435,14 @@
   flex-direction: column;
   align-items: center;
 }
+.contact .msg-text {
+  font-family: Old Standard TT;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #222222;
+}
 .contact .contact__top-info {
   display: flex;
   flex-direction: column;
@@ -2488,27 +2507,35 @@
   letter-spacing: 0px;
   color: #777777;
 }
-.contact img {
+.contact .map {
   margin-top: 2rem;
+  margin-bottom: 3rem;
   width: 90%;
 }
 @media (min-width: 1000px) {
-  .contact img {
-    width: 45%;
+  .contact .map {
     margin-top: unset;
+    width: 50%;
+  }
+}
+.contact .map div iframe {
+  height: 250px;
+}
+@media (min-width: 1000px) {
+  .contact .map div iframe {
+    height: 350px;
   }
 }
 .contact form {
   width: 90%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1000px) {
   .contact form {
-    margin-top: 2rem;
-    width: 45%;
+    width: 50%;
   }
 }
 .contact form .input-text {
@@ -3852,6 +3879,9 @@
   border: 2px solid #BEAD8E;
   margin-top: 2rem;
   margin-left: 0.5rem;
+}
+.main__form #check-availability-form .submit:hover {
+  filter: hue-rotate(45deg);
 }
 .main__form #check-availability-form .submit a {
   color: white;
