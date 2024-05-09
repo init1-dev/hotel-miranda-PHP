@@ -33,7 +33,6 @@
                         name="check_in" 
                         id="check_in" 
                         onfocus="this.showPicker()" 
-                        value="2024-04-07"
                         required
                     >
                 </div>
@@ -45,7 +44,6 @@
                         name="check_out" 
                         id="check_out" 
                         onfocus="this.showPicker()" 
-                        value="2024-04-12"
                         required
                     >
                 </div>
