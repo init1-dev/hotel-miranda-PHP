@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        $("#check-availability-form").on("submit", function( event ) {
+        $(".main-form").on("submit", function( event ) {
             event.preventDefault();
             const checkIn = $("#check_in")[0].value;
             const checkOut = $("#check_out")[0].value;

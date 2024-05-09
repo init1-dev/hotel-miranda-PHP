@@ -2,5 +2,5 @@
 
 # TODO
 
-- rooms-grid swiper pages bug in mobile (3,4)
 - check room availability in form submit
+- fix possible bug in booking form (Uncaught TypeError: Cannot read properties of undefined (reading 'value'))

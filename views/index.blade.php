@@ -24,7 +24,7 @@
         </div>
 
         <div class="main__form">
-            <form id="check-availability-form" action="room-list.php">
+            <form id="check-availability-form" class="main-form" action="room-list.php">
                 <div class="input--container">
                     <label for="check_in" class="input--text">Arrival Date</p>
                     <input 
