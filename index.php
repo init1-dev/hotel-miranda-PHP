@@ -30,4 +30,17 @@
             </script>
         ';
     }
+
+    if (isset($_GET['contact']) && $_GET['contact'] === 'success') {
+        echo '
+            <script defer>
+                swal.fire({
+                    icon: "success",
+                    title: "Form submitted successfully",
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+            </script>
+        ';
+    }
 ?>

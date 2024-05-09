@@ -112,10 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../utils/forms/contact-form.php", 
                 formData
             ).then(_result => {
-                toast.fire({
-                    title: "Form submitted successfully"
-                });
-                $(this).reset;
+                window.location.href = "index.php?contact=success";
             }).catch(error => {
                 toast.fire({
                     icon: "error",
