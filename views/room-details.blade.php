@@ -45,11 +45,11 @@
                         <h4>Check Availability</h4>
                         <div class="input--container">
                             <label for="arrival" class="input--text">Check In</label>
-                            <input class="input" type="date" name="arrival" id="arrival" onfocus="this.showPicker()" value={{$check_in ? $check_in : ''}} required>
+                            <input class="input" type="date" name="arrival" id="arrival" value={{$check_in ? $check_in : ''}} required>
                         </div>
                         <div class="input--container">
                             <label for="departure" class="input--text">Check Out</label>
-                            <input class="input" type="date" name="departure" id="departure" onfocus="this.showPicker()" value={{$check_out ? $check_out : ''}} required>
+                            <input class="input" type="date" name="departure" id="departure" value={{$check_out ? $check_out : ''}} required>
                         </div>
                         <div class="input--container">
                             <label for="fullname" class="input--text">Fullname</label>

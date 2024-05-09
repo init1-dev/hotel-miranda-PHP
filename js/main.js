@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    document.querySelectorAll("input[type='date']").forEach((input) => {
+        input.addEventListener("click", function() {
+            this.showPicker();
+        });
+    });
+
     document.addEventListener("click", (event) => {
         const target = event.target;
         if (!target.closest(".header__nav") && menuToggle.checked) {
@@ -80,6 +86,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+
+        $("#check-availability-form").on("submit", function( event ) {
+            event.preventDefault();
+            const checkIn = $("#check_in")[0].value;
+            const checkOut = $("#check_out")[0].value;
+            const checkInDate = new Date(checkIn).getTime();
+            const checkOutDate = new Date(checkOut).getTime();
+
+            if( checkOutDate < checkInDate ){
+                toast.fire({
+                    icon: "error",
+                    html: `<h3>Check Out date must be greater than Check In</h3>`
+                });
+            } else {
+                window.location.href = `room-list.php?check_in=${checkIn}&check_out=${checkOut}`;
+            }
+        })
 
         $( ".booking-form" ).on( "submit", function( event ) {
             event.preventDefault();

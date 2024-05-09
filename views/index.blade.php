@@ -32,7 +32,6 @@
                         type="date" 
                         name="check_in" 
                         id="check_in" 
-                        onfocus="this.showPicker()" 
                         required
                     >
                 </div>
@@ -43,7 +42,6 @@
                         type="date" 
                         name="check_out" 
                         id="check_out" 
-                        onfocus="this.showPicker()" 
                         required
                     >
                 </div>
