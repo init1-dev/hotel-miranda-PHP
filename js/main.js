@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ajaxForm(
                 "POST",
-                "../utils/forms/booking-form.php",
+                "../ajax/booking-form.php",
                 formData
             ).then((_result) => {
                 $("#arrival").css("border-color", "green");
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ajaxForm(
                 "POST", 
-                "../utils/forms/contact-form.php", 
+                "../ajax/contact-form.php", 
                 formData
             ).then(_result => {
                 window.location.href = "index.php?contact=success";

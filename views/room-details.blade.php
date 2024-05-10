@@ -41,7 +41,7 @@
 
             <main class="main">
                 <div class="main__form">
-                    <form id="check-availability-form" class="booking-form" action="../utils/forms/booking-form.php" method="POST">
+                    <form id="check-availability-form" class="booking-form" action="../ajax/booking-form.php" method="POST">
                         <h4>Check Availability</h4>
                         <div class="input--container">
                             <label for="arrival" class="input--text">Check In</label>

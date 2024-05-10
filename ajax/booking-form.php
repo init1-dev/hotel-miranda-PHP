@@ -1,9 +1,8 @@
 <?php
-    require_once __DIR__ . '/../connection.php';
-    require_once __DIR__ . '/../executeQueryWithParams.php';
-    require_once __DIR__ . '/../forms/inputsCheck.php';
-    require_once __DIR__ . '/../queries/checkAvailability.php';
-    require_once __DIR__ . '/../executeQueryWithParams.php';
+    require_once __DIR__ . '/../utils/connection.php';
+    require_once __DIR__ . '/../utils/executeQueryWithParams.php';
+    require_once __DIR__ . '/../utils/forms/inputsCheck.php';
+    require_once __DIR__ . '/../utils/queries/checkAvailability.php';
 
     $values = [];
     foreach ($_POST as $key => $value) {

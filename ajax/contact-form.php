@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . '/../connection.php';
-    require_once __DIR__ . '/../executeQueryWithParams.php';
-    require_once __DIR__ . '/../forms/inputsCheck.php';
+    require_once __DIR__ . '/../utils/connection.php';
+    require_once __DIR__ . '/../utils/executeQueryWithParams.php';
+    require_once __DIR__ . '/../utils/forms/inputsCheck.php';
 
     $values = [];
     foreach ($_POST as $key => $value) {
